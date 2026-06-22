@@ -1,90 +1,307 @@
 {
-    "extensionName": {
-        "message": "BookmarkHub - sync bookmarks ",
-        "description": ""
-    },
-    "extensionDescription": {
-        "message": "BookmarkHub,sync bookmarks across different browsers",
-        "description": ""
-    },
-    "uploadBookmarks": {
-        "message": "Upload Bookmarks",
-        "description": ""
-    },
-    "downloadBookmarks": {
-        "message": "DownLoad Bookmarks",
-        "description": ""
-    },
-    "syncBookmarks": {
-        "message": "Sync Bookmarks",
-        "description": ""
-    },
-    "removeAllBookmarks": {
-        "message": "Remove All Bookmarks",
-        "description": ""
-    },
-    "settings": {
-        "message": "Settings",
-        "description": ""
-    },
-    "help": {
-        "message": "Help",
-        "description": ""
-    },
-    "localCount": {
-        "message": "Local Bookmark Count",
-        "description": ""
-    },
-    "remoteCount": {
-        "message": "Remote Bookmark Count",
-        "description": ""
-    },
-    "githubToken": {
-        "message": "Github Token",
-        "description": ""
-    },
-    "gistID": {
-        "message": "Gist ID",
-        "description": ""
-    },
-    "gistFileName": {
-        "message": "Gist File Name",
-        "description": ""
-    },
-    "enableNotifications": {
-        "message": "Enable Notifications",
-        "description": ""
-    },
-    "success": {
-        "message": "Success",
-        "description": ""
-    },
-    "failed": {
-        "message": "Failed",
-        "description": ""
-    },
-    "error": {
-        "message": "Error",
-        "description": ""
-    },
-    "author": {
-        "message": "Author",
-        "description": ""
-    },
-    "uploadBookmarksDesc": {
-        "message": "Upload all the bookmarks of the local browser to the server",
-        "description": ""
-    },
-    "downloadBookmarksDesc": {
-        "message": "First clear the bookmarks in the local browser, and then download all the bookmarks on the server to the local browser",
-        "description": ""
-    },
-    "syncBookmarksDesc": {
-        "message": "Merge all the bookmarks on the server into the local browser, and then upload them to the server",
-        "description": ""
-    },
-    "removeAllBookmarksDesc": {
-        "message": "Remove All Bookmarks, Please backup first",
-        "description": ""
-    }
+	"extensionName": {
+		"message": "BookmarkHub - sync bookmarks ",
+		"description": ""
+	},
+	"extensionDescription": {
+		"message": "BookmarkHub,sync bookmarks across different browsers",
+		"description": ""
+	},
+	"uploadBookmarks": {
+		"message": "Upload Bookmarks",
+		"description": ""
+	},
+	"downloadBookmarks": {
+		"message": "DownLoad Bookmarks",
+		"description": ""
+	},
+	"syncBookmarks": {
+		"message": "Sync Bookmarks",
+		"description": ""
+	},
+	"removeAllBookmarks": {
+		"message": "Remove All Bookmarks",
+		"description": ""
+	},
+	"settings": {
+		"message": "Settings",
+		"description": ""
+	},
+	"help": {
+		"message": "Help",
+		"description": ""
+	},
+	"localCount": {
+		"message": "Local Bookmark Count",
+		"description": ""
+	},
+	"remoteCount": {
+		"message": "Remote Bookmark Count",
+		"description": ""
+	},
+	"githubToken": {
+		"message": "Github Token",
+		"description": ""
+	},
+	"gistID": {
+		"message": "Gist ID",
+		"description": ""
+	},
+	"gistFileName": {
+		"message": "Gist File Name",
+		"description": ""
+	},
+	"enableNotifications": {
+		"message": "Enable Notifications",
+		"description": ""
+	},
+	"success": {
+		"message": "Success",
+		"description": ""
+	},
+	"failed": {
+		"message": "Failed",
+		"description": ""
+	},
+	"error": {
+		"message": "Error",
+		"description": ""
+	},
+	"author": {
+		"message": "Author",
+		"description": ""
+	},
+	"uploadBookmarksDesc": {
+		"message": "Upload all the bookmarks of the local browser to the server",
+		"description": ""
+	},
+	"downloadBookmarksDesc": {
+		"message": "First clear the bookmarks in the local browser, and then download all the bookmarks on the server to the local browser",
+		"description": ""
+	},
+	"syncBookmarksDesc": {
+		"message": "Merge all the bookmarks on the server into the local browser, and then upload them to the server",
+		"description": ""
+	},
+	"removeAllBookmarksDesc": {
+		"message": "Remove All Bookmarks, Please backup first",
+		"description": ""
+	},
+	"autoSyncTitle": {
+		"message": "Scheduled Auto Sync",
+		"description": ""
+	},
+	"autoSyncMissingConfig": {
+		"message": "Please fill in Token / Gist ID / File Name in settings first",
+		"description": ""
+	},
+	"autoSyncSection": {
+		"message": "Scheduled Auto Sync",
+		"description": ""
+	},
+	"autoSyncEnable": {
+		"message": "Enable Auto Sync",
+		"description": ""
+	},
+	"autoSyncEnableDesc": {
+		"message": "Sync bookmarks between local and Gist on a schedule",
+		"description": ""
+	},
+	"autoSyncInterval": {
+		"message": "Sync Interval",
+		"description": ""
+	},
+	"autoSyncDirection": {
+		"message": "Sync Direction",
+		"description": ""
+	},
+	"autoSyncDirBoth": {
+		"message": "Bidirectional (download then upload)",
+		"description": ""
+	},
+	"autoSyncDirUpload": {
+		"message": "Upload only (local → Gist)",
+		"description": ""
+	},
+	"autoSyncDirDownload": {
+		"message": "Download only (Gist → local)",
+		"description": ""
+	},
+	"autoSyncOnStartup": {
+		"message": "Sync on Browser Startup",
+		"description": ""
+	},
+	"autoSyncOnStartupDesc": {
+		"message": "Trigger a sync immediately when browser starts",
+		"description": ""
+	},
+	"autoSyncLastTime": {
+		"message": "Last Auto Sync",
+		"description": ""
+	},
+	"autoSyncRunNow": {
+		"message": "Run Now",
+		"description": ""
+	},
+	"autoSyncSave": {
+		"message": "Save",
+		"description": ""
+	},
+	"autoSyncSaved": {
+		"message": "Saved, auto sync settings applied",
+		"description": ""
+	},
+	"autoSyncSaveError": {
+		"message": "Saved, but failed to notify background",
+		"description": ""
+	},
+	"autoSyncNever": {
+		"message": "Never",
+		"description": ""
+	},
+	"lastSync": {
+		"message": "Last Sync",
+		"description": "Popup sync time row label, e.g. 'Last Sync: 2026-06-22 06:45'"
+	},
+	"lastSyncNotYet": {
+		"message": "Not yet updated",
+		"description": "Shown when no sync has happened yet; styled red italic"
+	},
+	"lastSyncSourceAuto": {
+		"message": "Auto",
+		"description": "Badge indicating the sync was triggered by the scheduled alarm (trigger source 01)"
+	},
+	"lastSyncSourceManual": {
+		"message": "Manual",
+		"description": "Badge indicating the sync was triggered by clicking upload/download (trigger source 02)"
+	},
+	"autoSyncInterval_15m": {
+		"message": "15 minutes",
+		"description": "Auto sync interval option: 15 minutes"
+	},
+	"autoSyncInterval_30m": {
+		"message": "30 minutes",
+		"description": "Auto sync interval option: 30 minutes"
+	},
+	"autoSyncInterval_1h": {
+		"message": "1 hour",
+		"description": "Auto sync interval option: 1 hour"
+	},
+	"autoSyncInterval_2h": {
+		"message": "2 hours",
+		"description": "Auto sync interval option: 2 hours"
+	},
+	"autoSyncInterval_6h": {
+		"message": "6 hours",
+		"description": "Auto sync interval option: 6 hours"
+	},
+	"autoSyncInterval_12h": {
+		"message": "12 hours",
+		"description": "Auto sync interval option: 12 hours"
+	},
+	"autoSyncInterval_24h": {
+		"message": "24 hours",
+		"description": "Auto sync interval option: 24 hours"
+	},
+	"autoSyncInterval_48h": {
+		"message": "48 hours",
+		"description": "Auto sync interval option: 48 hours"
+	},
+	"autoSyncInterval_72h": {
+		"message": "72 hours",
+		"description": "Auto sync interval option: 72 hours"
+	},
+	"autoSyncRunning": {
+		"message": "⏳ Syncing..."
+	},
+	"autoSyncRunSuccess": {
+		"message": "✅ Synced at "
+	},
+	"autoSyncRunDone": {
+		"message": "✅ Sync completed"
+	},
+	"autoSyncRunError": {
+		"message": "❌ Sync failed: "
+	},
+	"viewGist": {
+		"message": "View Gist"
+	},
+	"viewGistTitle": {
+		"message": "View the synced bookmarks file on GitHub"
+	},
+	"viewGistHint": {
+		"message": "Save the Gist ID first"
+	},
+	"githubTokenHelp": {
+		"message": "A Personal Access Token (classic) with the 'gist' scope is required.",
+		"description": "Hint shown below the GitHub Token field"
+	},
+	"getToken": {
+		"message": "Get Token",
+		"description": "Button to open GitHub token settings page"
+	},
+	"createNewGist": {
+		"message": "📝 Create new Gist",
+		"description": "Link to open gist.github.com to create a new Gist"
+	},
+	"gistIDHelp": {
+		"message": "Paste only the ID portion from your Gist URL (e.g. for gist.github.com/<ID>, copy just the <ID> part, not the full URL).",
+		"description": "Hint shown below the Gist ID field"
+	},
+	"aiOrganizeSection": {
+		"message": "🤖 AI Organize Bookmarks",
+		"description": "Options page advanced features section title"
+	},
+	"aiOrganizeBackendUrl": {
+		"message": "AI Organize Backend URL",
+		"description": "Label for the backend service URL input in advanced features"
+	},
+	"aiOrganizeBackendUrlHelp": {
+		"message": "Default http://103.11.78.250:18903. Change this if you self-host the backend.",
+		"description": "Help text shown below the backend URL input"
+	},
+	"aiOrganizeRunButton": {
+		"message": "Organize Bookmarks",
+		"description": "Button that triggers the AI organize task"
+	},
+	"aiOrganizeRunningTitle": {
+		"message": "🤖 AI Organizing…",
+		"description": "Title of the progress bar shown in the popup during the task"
+	},
+	"aiOrganizeProgressLabel": {
+		"message": "{current} / {total} done ({step})",
+		"description": "Progress text template: {current} done count, {total} total, {step} current step name"
+	},
+	"aiOrganizeModalTitle": {
+		"message": "🎉 Organize Complete",
+		"description": "Title of the modal shown after organize task succeeds"
+	},
+	"aiOrganizeModalSummary": {
+		"message": "Organized {count} bookmarks into {cats} categories",
+		"description": "Modal summary: {count} bookmark count, {cats} category count"
+	},
+	"aiOrganizeModalHint": {
+		"message": "Organized into the 「AI分类」 root folder in your Gist. Click \"Download Bookmarks\" in the popup to sync to your browser.",
+		"description": "Hint at the bottom of the success modal"
+	},
+	"aiOrganizeModalClose": {
+		"message": "Close",
+		"description": "Modal close button"
+	},
+	"aiOrganizeFailed": {
+		"message": "❌ Organize Failed",
+		"description": "Title of the modal shown when the organize task fails"
+	},
+	"aiOrganizeMissingConfig": {
+		"message": "Please configure Token / Gist ID / File Name first",
+		"description": "Hint shown when the user hasn't filled in required config"
+	},
+	"aiOrganizeStartHint": {
+		"message": "✅ Started. Results window will pop up automatically when done.",
+		"description": "Hint shown on options page after clicking the organize button"
+	},
+	"aiOrganizeRunning": {
+		"message": "AI Organizing…",
+		"description": "Label shown on the Organize button while a task is running"
+	}
 }

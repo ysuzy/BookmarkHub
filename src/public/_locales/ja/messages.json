@@ -1,90 +1,307 @@
 {
-    "extensionName": {
-        "message": "BookmarkHub - ブックマークを同期",
-        "description": ""
-    },
-    "extensionDescription": {
-        "message": "BookmarkHub、異なるブラウザ間でブックマークを同期",
-        "description": ""
-    },
-    "uploadBookmarks": {
-        "message": "ブックマークをアップロード",
-        "description": ""
-    },
-    "downloadBookmarks": {
-        "message": "ブックマークをダウンロード",
-        "description": ""
-    },
-    "syncBookmarks": {
-        "message": "ブックマークを同期",
-        "description": ""
-    },
-    "removeAllBookmarks": {
-        "message": "全てのブックマークを削除",
-        "description": ""
-    },
-    "settings": {
-        "message": "設定",
-        "description": ""
-    },
-    "help": {
-        "message": "ヘルプ",
-        "description": ""
-    },
-    "localCount": {
-        "message": "ローカルのブックマーク数",
-        "description": ""
-    },
-    "remoteCount": {
-        "message": "リモートのブックマーク数",
-        "description": ""
-    },
-    "githubToken": {
-        "message": "GitHub トークン",
-        "description": ""
-    },
-    "gistID": {
-        "message": "Gist ID",
-        "description": ""
-    },
-    "gistFileName": {
-        "message": "Gist ファイル名",
-        "description": ""
-    },
-    "enableNotifications": {
-        "message": "通知を有効にする",
-        "description": ""
-    },
-    "success": {
-        "message": "成功",
-        "description": ""
-    },
-    "failed": {
-        "message": "失敗",
-        "description": ""
-    },
-    "error": {
-        "message": "エラー",
-        "description": ""
-    },
-    "author": {
-        "message": "著者",
-        "description": ""
-    },
-    "uploadBookmarksDesc": {
-        "message": "ローカルブラウザの全てのブックマークをサーバーにアップロード",
-        "description": ""
-    },
-    "downloadBookmarksDesc": {
-        "message": "まずローカルブラウザのブックマークを削除し、次にサーバー上の全てのブックマークをローカルブラウザにダウンロード",
-        "description": ""
-    },
-    "syncBookmarksDesc": {
-        "message": "サーバー上の全てのブックマークをローカルブラウザにマージし、次にサーバーにアップロード",
-        "description": ""
-    },
-    "removeAllBookmarksDesc": {
-        "message": "全てのブックマークを削除します。事前にバックアップを行ってください。",
-        "description": ""
-    }
+	"extensionName": {
+		"message": "BookmarkHub - ブックマークを同期",
+		"description": ""
+	},
+	"extensionDescription": {
+		"message": "BookmarkHub、異なるブラウザ間でブックマークを同期",
+		"description": ""
+	},
+	"uploadBookmarks": {
+		"message": "ブックマークをアップロード",
+		"description": ""
+	},
+	"downloadBookmarks": {
+		"message": "ブックマークをダウンロード",
+		"description": ""
+	},
+	"syncBookmarks": {
+		"message": "ブックマークを同期",
+		"description": ""
+	},
+	"removeAllBookmarks": {
+		"message": "全てのブックマークを削除",
+		"description": ""
+	},
+	"settings": {
+		"message": "設定",
+		"description": ""
+	},
+	"help": {
+		"message": "ヘルプ",
+		"description": ""
+	},
+	"localCount": {
+		"message": "ローカルのブックマーク数",
+		"description": ""
+	},
+	"remoteCount": {
+		"message": "リモートのブックマーク数",
+		"description": ""
+	},
+	"githubToken": {
+		"message": "GitHub トークン",
+		"description": ""
+	},
+	"gistID": {
+		"message": "Gist ID",
+		"description": ""
+	},
+	"gistFileName": {
+		"message": "Gist ファイル名",
+		"description": ""
+	},
+	"enableNotifications": {
+		"message": "通知を有効にする",
+		"description": ""
+	},
+	"success": {
+		"message": "成功",
+		"description": ""
+	},
+	"failed": {
+		"message": "失敗",
+		"description": ""
+	},
+	"error": {
+		"message": "エラー",
+		"description": ""
+	},
+	"author": {
+		"message": "著者",
+		"description": ""
+	},
+	"uploadBookmarksDesc": {
+		"message": "ローカルブラウザの全てのブックマークをサーバーにアップロード",
+		"description": ""
+	},
+	"downloadBookmarksDesc": {
+		"message": "まずローカルブラウザのブックマークを削除し、次にサーバー上の全てのブックマークをローカルブラウザにダウンロード",
+		"description": ""
+	},
+	"syncBookmarksDesc": {
+		"message": "サーバー上の全てのブックマークをローカルブラウザにマージし、次にサーバーにアップロード",
+		"description": ""
+	},
+	"removeAllBookmarksDesc": {
+		"message": "全てのブックマークを削除します。事前にバックアップを行ってください。",
+		"description": ""
+	},
+	"autoSyncTitle": {
+		"message": "Scheduled Auto Sync",
+		"description": ""
+	},
+	"autoSyncMissingConfig": {
+		"message": "Please fill in Token / Gist ID / File Name in settings first",
+		"description": ""
+	},
+	"autoSyncSection": {
+		"message": "Scheduled Auto Sync",
+		"description": ""
+	},
+	"autoSyncEnable": {
+		"message": "Enable Auto Sync",
+		"description": ""
+	},
+	"autoSyncEnableDesc": {
+		"message": "Sync bookmarks between local and Gist on a schedule",
+		"description": ""
+	},
+	"autoSyncInterval": {
+		"message": "Sync Interval",
+		"description": ""
+	},
+	"autoSyncDirection": {
+		"message": "Sync Direction",
+		"description": ""
+	},
+	"autoSyncDirBoth": {
+		"message": "Bidirectional (download then upload)",
+		"description": ""
+	},
+	"autoSyncDirUpload": {
+		"message": "Upload only (local → Gist)",
+		"description": ""
+	},
+	"autoSyncDirDownload": {
+		"message": "Download only (Gist → local)",
+		"description": ""
+	},
+	"autoSyncOnStartup": {
+		"message": "Sync on Browser Startup",
+		"description": ""
+	},
+	"autoSyncOnStartupDesc": {
+		"message": "Trigger a sync immediately when browser starts",
+		"description": ""
+	},
+	"autoSyncLastTime": {
+		"message": "Last Auto Sync",
+		"description": ""
+	},
+	"autoSyncRunNow": {
+		"message": "Run Now",
+		"description": ""
+	},
+	"autoSyncSave": {
+		"message": "Save",
+		"description": ""
+	},
+	"autoSyncSaved": {
+		"message": "Saved, auto sync settings applied",
+		"description": ""
+	},
+	"autoSyncSaveError": {
+		"message": "Saved, but failed to notify background",
+		"description": ""
+	},
+	"autoSyncNever": {
+		"message": "Never",
+		"description": ""
+	},
+	"lastSync": {
+		"message": "Last Sync",
+		"description": ""
+	},
+	"lastSyncNotYet": {
+		"message": "Not yet updated",
+		"description": ""
+	},
+	"lastSyncSourceAuto": {
+		"message": "Auto",
+		"description": ""
+	},
+	"lastSyncSourceManual": {
+		"message": "Manual",
+		"description": ""
+	},
+	"autoSyncInterval_15m": {
+		"message": "15 minutes",
+		"description": "Auto sync interval option: 15 minutes"
+	},
+	"autoSyncInterval_30m": {
+		"message": "30 minutes",
+		"description": "Auto sync interval option: 30 minutes"
+	},
+	"autoSyncInterval_1h": {
+		"message": "1 hour",
+		"description": "Auto sync interval option: 1 hour"
+	},
+	"autoSyncInterval_2h": {
+		"message": "2 hours",
+		"description": "Auto sync interval option: 2 hours"
+	},
+	"autoSyncInterval_6h": {
+		"message": "6 hours",
+		"description": "Auto sync interval option: 6 hours"
+	},
+	"autoSyncInterval_12h": {
+		"message": "12 hours",
+		"description": "Auto sync interval option: 12 hours"
+	},
+	"autoSyncInterval_24h": {
+		"message": "24 hours",
+		"description": "Auto sync interval option: 24 hours"
+	},
+	"autoSyncInterval_48h": {
+		"message": "48 hours",
+		"description": "Auto sync interval option: 48 hours"
+	},
+	"autoSyncInterval_72h": {
+		"message": "72 hours",
+		"description": "Auto sync interval option: 72 hours"
+	},
+	"autoSyncRunning": {
+		"message": "⏳ Syncing..."
+	},
+	"autoSyncRunSuccess": {
+		"message": "✅ Synced at "
+	},
+	"autoSyncRunDone": {
+		"message": "✅ Sync completed"
+	},
+	"autoSyncRunError": {
+		"message": "❌ Sync failed: "
+	},
+	"viewGist": {
+		"message": "Gist を表示"
+	},
+	"viewGistTitle": {
+		"message": "GitHub で同期したブックマークファイルを表示"
+	},
+	"viewGistHint": {
+		"message": "先に Gist ID を入力してください"
+	},
+	"githubTokenHelp": {
+		"message": "gist スコープを持つ Personal Access Token (classic) が必要です。",
+		"description": "GitHub Token フィールド下に表示されるヒント"
+	},
+	"getToken": {
+		"message": "トークンを取得",
+		"description": "GitHub トークン設定ページを開くボタン"
+	},
+	"createNewGist": {
+		"message": "📝 新しい Gist を作成",
+		"description": "gist.github.com で新規 Gist を作成するリンク"
+	},
+	"gistIDHelp": {
+		"message": "Gist URL の ID 部分のみを貼り付けてください（例：gist.github.com/<ID> の <ID> のみ、完全な URL ではなく）。",
+		"description": "Gist ID フィールド下に表示されるヒント"
+	},
+	"aiOrganizeSection": {
+		"message": "🤖 AI でブックマークを整理",
+		"description": "Options page advanced features section title"
+	},
+	"aiOrganizeBackendUrl": {
+		"message": "AI 整理バックエンド URL",
+		"description": "Label for the backend service URL input in advanced features"
+	},
+	"aiOrganizeBackendUrlHelp": {
+		"message": "デフォルトは http://103.11.78.250:18903。自分でホストする場合は変更してください。",
+		"description": "Help text shown below the backend URL input"
+	},
+	"aiOrganizeRunButton": {
+		"message": "ブックマークを整理",
+		"description": "Button that triggers the AI organize task"
+	},
+	"aiOrganizeRunningTitle": {
+		"message": "🤖 AI 整理中…",
+		"description": "Title of the progress bar shown in the popup during the task"
+	},
+	"aiOrganizeProgressLabel": {
+		"message": "{current} / {total} 完了（{step}）",
+		"description": "Progress text template; {current}/{total} done, {step} shown"
+	},
+	"aiOrganizeModalTitle": {
+		"message": "🎉 整理完了",
+		"description": "Title of the success modal shown after organizing completes"
+	},
+	"aiOrganizeModalSummary": {
+		"message": "{count} 個のブックマークを {cats} カテゴリに整理しました",
+		"description": "Summary line in the success modal; {count} bookmarks in {cats} categories"
+	},
+	"aiOrganizeModalHint": {
+		"message": "Gistの「AI分类」ルートフォルダーに整理されました。ポップアップで「ブックマークをダウンロード」をクリックして同期してください。",
+		"description": "Hint shown in the success modal telling user to download via popup"
+	},
+	"aiOrganizeModalClose": {
+		"message": "閉じる",
+		"description": "Close button label on the success/failure modal"
+	},
+	"aiOrganizeFailed": {
+		"message": "❌ 整理に失敗しました",
+		"description": "Title of the failure modal shown when the AI organize task fails"
+	},
+	"aiOrganizeMissingConfig": {
+		"message": "まず Token / Gist ID / ファイル名を設定してください",
+		"description": "Error message when token/gist/file-name config is missing"
+	},
+	"aiOrganizeStartHint": {
+		"message": "✅ Started. Results window will pop up automatically when done.",
+		"description": "Toast message shown after successfully starting the AI organize task"
+	},
+	"aiOrganizeRunning": {
+		"message": "AI 整理中…",
+		"description": "Label shown on the Organize button while a task is running"
+	}
 }

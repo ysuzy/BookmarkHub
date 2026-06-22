@@ -1,90 +1,307 @@
 {
-    "extensionName": {
-        "message": "BookmarkHub - مزامنة العلامات المرجعية",
-        "description": ""
-    },
-    "extensionDescription": {
-        "message": "BookmarkHub، مزامنة العلامات المرجعية عبر متصفحات مختلفة",
-        "description": ""
-    },
-    "uploadBookmarks": {
-        "message": "رفع العلامات المرجعية",
-        "description": ""
-    },
-    "downloadBookmarks": {
-        "message": "تنزيل العلامات المرجعية",
-        "description": ""
-    },
-    "syncBookmarks": {
-        "message": "مزامنة العلامات المرجعية",
-        "description": ""
-    },
-    "removeAllBookmarks": {
-        "message": "إزالة جميع العلامات المرجعية",
-        "description": ""
-    },
-    "settings": {
-        "message": "الإعدادات",
-        "description": ""
-    },
-    "help": {
-        "message": "المساعدة",
-        "description": ""
-    },
-    "localCount": {
-        "message": "عدد العلامات المرجعية المحلية",
-        "description": ""
-    },
-    "remoteCount": {
-        "message": "عدد العلامات المرجعية البعيدة",
-        "description": ""
-    },
-    "githubToken": {
-        "message": "رمز GitHub",
-        "description": ""
-    },
-    "gistID": {
-        "message": "معرف Gist",
-        "description": ""
-    },
-    "gistFileName": {
-        "message": "اسم ملف Gist",
-        "description": ""
-    },
-    "enableNotifications": {
-        "message": "تمكين الإشعارات",
-        "description": ""
-    },
-    "success": {
-        "message": "نجاح",
-        "description": ""
-    },
-    "failed": {
-        "message": "فشل",
-        "description": ""
-    },
-    "error": {
-        "message": "خطأ",
-        "description": ""
-    },
-    "author": {
-        "message": "المؤلف",
-        "description": ""
-    },
-    "uploadBookmarksDesc": {
-        "message": "رفع جميع العلامات المرجعية في المتصفح المحلي إلى الخادم",
-        "description": ""
-    },
-    "downloadBookmarksDesc": {
-        "message": "أزل العلامات المرجعية في المتصفح المحلي أولاً، ثم قم بتنزيل جميع العلامات المرجعية على الخادم إلى المتصفح المحلي",
-        "description": ""
-    },
-    "syncBookmarksDesc": {
-        "message": "دمج جميع العلامات المرجعية على الخادم في المتصفح المحلي، ثم قم بتحميلها إلى الخادم",
-        "description": ""
-    },
-    "removeAllBookmarksDesc": {
-        "message": "أزل جميع العلامات المرجعية. يرجى إجراء نسخ احتياطي أولاً",
-        "description": ""
-    }
+	"extensionName": {
+		"message": "BookmarkHub - مزامنة العلامات المرجعية",
+		"description": ""
+	},
+	"extensionDescription": {
+		"message": "BookmarkHub، مزامنة العلامات المرجعية عبر متصفحات مختلفة",
+		"description": ""
+	},
+	"uploadBookmarks": {
+		"message": "رفع العلامات المرجعية",
+		"description": ""
+	},
+	"downloadBookmarks": {
+		"message": "تنزيل العلامات المرجعية",
+		"description": ""
+	},
+	"syncBookmarks": {
+		"message": "مزامنة العلامات المرجعية",
+		"description": ""
+	},
+	"removeAllBookmarks": {
+		"message": "إزالة جميع العلامات المرجعية",
+		"description": ""
+	},
+	"settings": {
+		"message": "الإعدادات",
+		"description": ""
+	},
+	"help": {
+		"message": "المساعدة",
+		"description": ""
+	},
+	"localCount": {
+		"message": "عدد العلامات المرجعية المحلية",
+		"description": ""
+	},
+	"remoteCount": {
+		"message": "عدد العلامات المرجعية البعيدة",
+		"description": ""
+	},
+	"githubToken": {
+		"message": "رمز GitHub",
+		"description": ""
+	},
+	"gistID": {
+		"message": "معرف Gist",
+		"description": ""
+	},
+	"gistFileName": {
+		"message": "اسم ملف Gist",
+		"description": ""
+	},
+	"enableNotifications": {
+		"message": "تمكين الإشعارات",
+		"description": ""
+	},
+	"success": {
+		"message": "نجاح",
+		"description": ""
+	},
+	"failed": {
+		"message": "فشل",
+		"description": ""
+	},
+	"error": {
+		"message": "خطأ",
+		"description": ""
+	},
+	"author": {
+		"message": "المؤلف",
+		"description": ""
+	},
+	"uploadBookmarksDesc": {
+		"message": "رفع جميع العلامات المرجعية في المتصفح المحلي إلى الخادم",
+		"description": ""
+	},
+	"downloadBookmarksDesc": {
+		"message": "أزل العلامات المرجعية في المتصفح المحلي أولاً، ثم قم بتنزيل جميع العلامات المرجعية على الخادم إلى المتصفح المحلي",
+		"description": ""
+	},
+	"syncBookmarksDesc": {
+		"message": "دمج جميع العلامات المرجعية على الخادم في المتصفح المحلي، ثم قم بتحميلها إلى الخادم",
+		"description": ""
+	},
+	"removeAllBookmarksDesc": {
+		"message": "أزل جميع العلامات المرجعية. يرجى إجراء نسخ احتياطي أولاً",
+		"description": ""
+	},
+	"autoSyncTitle": {
+		"message": "Scheduled Auto Sync",
+		"description": ""
+	},
+	"autoSyncMissingConfig": {
+		"message": "Please fill in Token / Gist ID / File Name in settings first",
+		"description": ""
+	},
+	"autoSyncSection": {
+		"message": "Scheduled Auto Sync",
+		"description": ""
+	},
+	"autoSyncEnable": {
+		"message": "Enable Auto Sync",
+		"description": ""
+	},
+	"autoSyncEnableDesc": {
+		"message": "Sync bookmarks between local and Gist on a schedule",
+		"description": ""
+	},
+	"autoSyncInterval": {
+		"message": "Sync Interval",
+		"description": ""
+	},
+	"autoSyncDirection": {
+		"message": "Sync Direction",
+		"description": ""
+	},
+	"autoSyncDirBoth": {
+		"message": "Bidirectional (download then upload)",
+		"description": ""
+	},
+	"autoSyncDirUpload": {
+		"message": "Upload only (local → Gist)",
+		"description": ""
+	},
+	"autoSyncDirDownload": {
+		"message": "Download only (Gist → local)",
+		"description": ""
+	},
+	"autoSyncOnStartup": {
+		"message": "Sync on Browser Startup",
+		"description": ""
+	},
+	"autoSyncOnStartupDesc": {
+		"message": "Trigger a sync immediately when browser starts",
+		"description": ""
+	},
+	"autoSyncLastTime": {
+		"message": "Last Auto Sync",
+		"description": ""
+	},
+	"autoSyncRunNow": {
+		"message": "Run Now",
+		"description": ""
+	},
+	"autoSyncSave": {
+		"message": "Save",
+		"description": ""
+	},
+	"autoSyncSaved": {
+		"message": "Saved, auto sync settings applied",
+		"description": ""
+	},
+	"autoSyncSaveError": {
+		"message": "Saved, but failed to notify background",
+		"description": ""
+	},
+	"autoSyncNever": {
+		"message": "Never",
+		"description": ""
+	},
+	"lastSync": {
+		"message": "Last Sync",
+		"description": ""
+	},
+	"lastSyncNotYet": {
+		"message": "Not yet updated",
+		"description": ""
+	},
+	"lastSyncSourceAuto": {
+		"message": "Auto",
+		"description": ""
+	},
+	"lastSyncSourceManual": {
+		"message": "Manual",
+		"description": ""
+	},
+	"autoSyncInterval_15m": {
+		"message": "15 minutes",
+		"description": "Auto sync interval option: 15 minutes"
+	},
+	"autoSyncInterval_30m": {
+		"message": "30 minutes",
+		"description": "Auto sync interval option: 30 minutes"
+	},
+	"autoSyncInterval_1h": {
+		"message": "1 hour",
+		"description": "Auto sync interval option: 1 hour"
+	},
+	"autoSyncInterval_2h": {
+		"message": "2 hours",
+		"description": "Auto sync interval option: 2 hours"
+	},
+	"autoSyncInterval_6h": {
+		"message": "6 hours",
+		"description": "Auto sync interval option: 6 hours"
+	},
+	"autoSyncInterval_12h": {
+		"message": "12 hours",
+		"description": "Auto sync interval option: 12 hours"
+	},
+	"autoSyncInterval_24h": {
+		"message": "24 hours",
+		"description": "Auto sync interval option: 24 hours"
+	},
+	"autoSyncInterval_48h": {
+		"message": "48 hours",
+		"description": "Auto sync interval option: 48 hours"
+	},
+	"autoSyncInterval_72h": {
+		"message": "72 hours",
+		"description": "Auto sync interval option: 72 hours"
+	},
+	"autoSyncRunning": {
+		"message": "⏳ Syncing..."
+	},
+	"autoSyncRunSuccess": {
+		"message": "✅ Synced at "
+	},
+	"autoSyncRunDone": {
+		"message": "✅ Sync completed"
+	},
+	"autoSyncRunError": {
+		"message": "❌ Sync failed: "
+	},
+	"viewGist": {
+		"message": "عرض Gist"
+	},
+	"viewGistTitle": {
+		"message": "عرض ملف الإشارات المرجعية المتزامن على GitHub"
+	},
+	"viewGistHint": {
+		"message": "أدخل معرف Gist أولاً"
+	},
+	"githubTokenHelp": {
+		"message": "يلزم وجود رمز وصول شخصي (كلاسيكي) بنطاق 'gist'.",
+		"description": "تلميح يظهر أسفل حقل رمز GitHub"
+	},
+	"getToken": {
+		"message": "الحصول على رمز",
+		"description": "زر لفتح صفحة إعدادات رمز GitHub"
+	},
+	"createNewGist": {
+		"message": "📝 إنشاء Gist جديد",
+		"description": "رابط لإنشاء Gist جديد في gist.github.com"
+	},
+	"gistIDHelp": {
+		"message": "الصق فقط جزء المعرف من عنوان URL لـ Gist (على سبيل المثال، لـ gist.github.com/<ID>، انسخ جزء <ID> فقط، وليس عنوان URL الكامل).",
+		"description": "تلميح يظهر أسفل حقل معرف Gist"
+	},
+	"aiOrganizeSection": {
+		"message": "🤖 تنظيم الإشارات المرجعية بالذكاء الاصطناعي",
+		"description": "Options page advanced features section title"
+	},
+	"aiOrganizeBackendUrl": {
+		"message": "رابط خادم الذكاء الاصطناعي",
+		"description": "Label for the backend service URL input in advanced features"
+	},
+	"aiOrganizeBackendUrlHelp": {
+		"message": "الافتراضي http://103.11.78.250:18903. غيّره إذا كنت تستضيف الخادم بنفسك.",
+		"description": "Help text shown below the backend URL input"
+	},
+	"aiOrganizeRunButton": {
+		"message": "تنظيم الإشارات المرجعية",
+		"description": "Button that triggers the AI organize task"
+	},
+	"aiOrganizeRunningTitle": {
+		"message": "🤖 جارٍ التنظيم بالذكاء الاصطناعي…",
+		"description": "Title of the progress bar shown in the popup during the task"
+	},
+	"aiOrganizeProgressLabel": {
+		"message": "تم {current} / {total} ({step})",
+		"description": "Progress text template; {current}/{total} done, {step} shown"
+	},
+	"aiOrganizeModalTitle": {
+		"message": "🎉 اكتمل التنظيم",
+		"description": "Title of the success modal shown after organizing completes"
+	},
+	"aiOrganizeModalSummary": {
+		"message": "تم تنظيم {count} إشارة مرجعية في {cats} فئات",
+		"description": "Summary line in the success modal; {count} bookmarks in {cats} categories"
+	},
+	"aiOrganizeModalHint": {
+		"message": "تم التنظيم في المجلد الجذر 「AI分类」 في Gist. انقر على \"تنزيل الإشارات المرجعية\" في النافذة المنبثقة للمزامنة.",
+		"description": "Hint shown in the success modal telling user to download via popup"
+	},
+	"aiOrganizeModalClose": {
+		"message": "إغلاق",
+		"description": "Close button label on the success/failure modal"
+	},
+	"aiOrganizeFailed": {
+		"message": "❌ فشل التنظيم",
+		"description": "Title of the failure modal shown when the AI organize task fails"
+	},
+	"aiOrganizeMissingConfig": {
+		"message": "يرجى تكوين Token / Gist ID / اسم الملف أولاً",
+		"description": "Error message when token/gist/file-name config is missing"
+	},
+	"aiOrganizeStartHint": {
+		"message": "✅ Started. Results window will pop up automatically when done.",
+		"description": "Toast message shown after successfully starting the AI organize task"
+	},
+	"aiOrganizeRunning": {
+		"message": "الذكاء الاصطناعي ينظّم…",
+		"description": "Label shown on the Organize button while a task is running"
+	}
 }

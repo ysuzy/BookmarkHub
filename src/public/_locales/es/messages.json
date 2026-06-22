@@ -1,90 +1,307 @@
 {
-    "extensionName": {
-        "message": "BookmarkHub - Sincronización de marcadores",
-        "description": ""
-    },
-    "extensionDescription": {
-        "message": "BookmarkHub, sincronización de marcadores entre diferentes navegadores",
-        "description": ""
-    },
-    "uploadBookmarks": {
-        "message": "Subir marcadores",
-        "description": ""
-    },
-    "downloadBookmarks": {
-        "message": "Descargar marcadores",
-        "description": ""
-    },
-    "syncBookmarks": {
-        "message": "Sincronizar marcadores",
-        "description": ""
-    },
-    "removeAllBookmarks": {
-        "message": "Eliminar todos los marcadores",
-        "description": ""
-    },
-    "settings": {
-        "message": "Configuración",
-        "description": ""
-    },
-    "help": {
-        "message": "Ayuda",
-        "description": ""
-    },
-    "localCount": {
-        "message": "Cantidad de marcadores locales",
-        "description": ""
-    },
-    "remoteCount": {
-        "message": "Cantidad de marcadores remotos",
-        "description": ""
-    },
-    "githubToken": {
-        "message": "Token de GitHub",
-        "description": ""
-    },
-    "gistID": {
-        "message": "ID de Gist",
-        "description": ""
-    },
-    "gistFileName": {
-        "message": "Nombre de archivo de Gist",
-        "description": ""
-    },
-    "enableNotifications": {
-        "message": "Activar notificaciones",
-        "description": ""
-    },
-    "success": {
-        "message": "Éxito",
-        "description": ""
-    },
-    "failed": {
-        "message": "Fracaso",
-        "description": ""
-    },
-    "error": {
-        "message": "Error",
-        "description": ""
-    },
-    "author": {
-        "message": "Autor",
-        "description": ""
-    },
-    "uploadBookmarksDesc": {
-        "message": "Subir todos los marcadores del navegador local al servidor",
-        "description": ""
-    },
-    "downloadBookmarksDesc": {
-        "message": "Eliminar primero los marcadores del navegador local y luego descargar todos los marcadores del servidor al navegador local",
-        "description": ""
-    },
-    "syncBookmarksDesc": {
-        "message": "Combinar todos los marcadores del servidor en el navegador local y luego subirlos al servidor",
-        "description": ""
-    },
-    "removeAllBookmarksDesc": {
-        "message": "Eliminar todos los marcadores. Por favor, realice una copia de seguridad primero.",
-        "description": ""
-    }
+	"extensionName": {
+		"message": "BookmarkHub - Sincronización de marcadores",
+		"description": ""
+	},
+	"extensionDescription": {
+		"message": "BookmarkHub, sincronización de marcadores entre diferentes navegadores",
+		"description": ""
+	},
+	"uploadBookmarks": {
+		"message": "Subir marcadores",
+		"description": ""
+	},
+	"downloadBookmarks": {
+		"message": "Descargar marcadores",
+		"description": ""
+	},
+	"syncBookmarks": {
+		"message": "Sincronizar marcadores",
+		"description": ""
+	},
+	"removeAllBookmarks": {
+		"message": "Eliminar todos los marcadores",
+		"description": ""
+	},
+	"settings": {
+		"message": "Configuración",
+		"description": ""
+	},
+	"help": {
+		"message": "Ayuda",
+		"description": ""
+	},
+	"localCount": {
+		"message": "Cantidad de marcadores locales",
+		"description": ""
+	},
+	"remoteCount": {
+		"message": "Cantidad de marcadores remotos",
+		"description": ""
+	},
+	"githubToken": {
+		"message": "Token de GitHub",
+		"description": ""
+	},
+	"gistID": {
+		"message": "ID de Gist",
+		"description": ""
+	},
+	"gistFileName": {
+		"message": "Nombre de archivo de Gist",
+		"description": ""
+	},
+	"enableNotifications": {
+		"message": "Activar notificaciones",
+		"description": ""
+	},
+	"success": {
+		"message": "Éxito",
+		"description": ""
+	},
+	"failed": {
+		"message": "Fracaso",
+		"description": ""
+	},
+	"error": {
+		"message": "Error",
+		"description": ""
+	},
+	"author": {
+		"message": "Autor",
+		"description": ""
+	},
+	"uploadBookmarksDesc": {
+		"message": "Subir todos los marcadores del navegador local al servidor",
+		"description": ""
+	},
+	"downloadBookmarksDesc": {
+		"message": "Eliminar primero los marcadores del navegador local y luego descargar todos los marcadores del servidor al navegador local",
+		"description": ""
+	},
+	"syncBookmarksDesc": {
+		"message": "Combinar todos los marcadores del servidor en el navegador local y luego subirlos al servidor",
+		"description": ""
+	},
+	"removeAllBookmarksDesc": {
+		"message": "Eliminar todos los marcadores. Por favor, realice una copia de seguridad primero.",
+		"description": ""
+	},
+	"autoSyncTitle": {
+		"message": "Scheduled Auto Sync",
+		"description": ""
+	},
+	"autoSyncMissingConfig": {
+		"message": "Please fill in Token / Gist ID / File Name in settings first",
+		"description": ""
+	},
+	"autoSyncSection": {
+		"message": "Scheduled Auto Sync",
+		"description": ""
+	},
+	"autoSyncEnable": {
+		"message": "Enable Auto Sync",
+		"description": ""
+	},
+	"autoSyncEnableDesc": {
+		"message": "Sync bookmarks between local and Gist on a schedule",
+		"description": ""
+	},
+	"autoSyncInterval": {
+		"message": "Sync Interval",
+		"description": ""
+	},
+	"autoSyncDirection": {
+		"message": "Sync Direction",
+		"description": ""
+	},
+	"autoSyncDirBoth": {
+		"message": "Bidirectional (download then upload)",
+		"description": ""
+	},
+	"autoSyncDirUpload": {
+		"message": "Upload only (local → Gist)",
+		"description": ""
+	},
+	"autoSyncDirDownload": {
+		"message": "Download only (Gist → local)",
+		"description": ""
+	},
+	"autoSyncOnStartup": {
+		"message": "Sync on Browser Startup",
+		"description": ""
+	},
+	"autoSyncOnStartupDesc": {
+		"message": "Trigger a sync immediately when browser starts",
+		"description": ""
+	},
+	"autoSyncLastTime": {
+		"message": "Last Auto Sync",
+		"description": ""
+	},
+	"autoSyncRunNow": {
+		"message": "Run Now",
+		"description": ""
+	},
+	"autoSyncSave": {
+		"message": "Save",
+		"description": ""
+	},
+	"autoSyncSaved": {
+		"message": "Saved, auto sync settings applied",
+		"description": ""
+	},
+	"autoSyncSaveError": {
+		"message": "Saved, but failed to notify background",
+		"description": ""
+	},
+	"autoSyncNever": {
+		"message": "Never",
+		"description": ""
+	},
+	"lastSync": {
+		"message": "Last Sync",
+		"description": ""
+	},
+	"lastSyncNotYet": {
+		"message": "Not yet updated",
+		"description": ""
+	},
+	"lastSyncSourceAuto": {
+		"message": "Auto",
+		"description": ""
+	},
+	"lastSyncSourceManual": {
+		"message": "Manual",
+		"description": ""
+	},
+	"autoSyncInterval_15m": {
+		"message": "15 minutes",
+		"description": "Auto sync interval option: 15 minutes"
+	},
+	"autoSyncInterval_30m": {
+		"message": "30 minutes",
+		"description": "Auto sync interval option: 30 minutes"
+	},
+	"autoSyncInterval_1h": {
+		"message": "1 hour",
+		"description": "Auto sync interval option: 1 hour"
+	},
+	"autoSyncInterval_2h": {
+		"message": "2 hours",
+		"description": "Auto sync interval option: 2 hours"
+	},
+	"autoSyncInterval_6h": {
+		"message": "6 hours",
+		"description": "Auto sync interval option: 6 hours"
+	},
+	"autoSyncInterval_12h": {
+		"message": "12 hours",
+		"description": "Auto sync interval option: 12 hours"
+	},
+	"autoSyncInterval_24h": {
+		"message": "24 hours",
+		"description": "Auto sync interval option: 24 hours"
+	},
+	"autoSyncInterval_48h": {
+		"message": "48 hours",
+		"description": "Auto sync interval option: 48 hours"
+	},
+	"autoSyncInterval_72h": {
+		"message": "72 hours",
+		"description": "Auto sync interval option: 72 hours"
+	},
+	"autoSyncRunning": {
+		"message": "⏳ Syncing..."
+	},
+	"autoSyncRunSuccess": {
+		"message": "✅ Synced at "
+	},
+	"autoSyncRunDone": {
+		"message": "✅ Sync completed"
+	},
+	"autoSyncRunError": {
+		"message": "❌ Sync failed: "
+	},
+	"viewGist": {
+		"message": "Ver Gist"
+	},
+	"viewGistTitle": {
+		"message": "Ver el archivo de marcadores sincronizado en GitHub"
+	},
+	"viewGistHint": {
+		"message": "Introduce primero el ID de Gist"
+	},
+	"githubTokenHelp": {
+		"message": "Se requiere un Personal Access Token (classic) con el alcance 'gist'.",
+		"description": "Pista mostrada debajo del campo Token de GitHub"
+	},
+	"getToken": {
+		"message": "Obtener Token",
+		"description": "Botón para abrir la página de configuración de tokens de GitHub"
+	},
+	"createNewGist": {
+		"message": "📝 Crear nuevo Gist",
+		"description": "Enlace para crear un nuevo Gist en gist.github.com"
+	},
+	"gistIDHelp": {
+		"message": "Pegue solo la parte de la ID de la URL del Gist (p. ej., para gist.github.com/<ID>, copie solo la parte <ID>, no la URL completa).",
+		"description": "Pista mostrada debajo del campo ID de Gist"
+	},
+	"aiOrganizeSection": {
+		"message": "🤖 Organizar marcadores con IA",
+		"description": "Options page advanced features section title"
+	},
+	"aiOrganizeBackendUrl": {
+		"message": "URL del backend de IA",
+		"description": "Label for the backend service URL input in advanced features"
+	},
+	"aiOrganizeBackendUrlHelp": {
+		"message": "Predeterminado http://103.11.78.250:18903. Cámbielo si aloja su propio backend.",
+		"description": "Help text shown below the backend URL input"
+	},
+	"aiOrganizeRunButton": {
+		"message": "Organizar marcadores",
+		"description": "Button that triggers the AI organize task"
+	},
+	"aiOrganizeRunningTitle": {
+		"message": "🤖 Organizando con IA…",
+		"description": "Title of the progress bar shown in the popup during the task"
+	},
+	"aiOrganizeProgressLabel": {
+		"message": "{current} / {total} completados ({step})",
+		"description": "Progress text template; {current}/{total} done, {step} shown"
+	},
+	"aiOrganizeModalTitle": {
+		"message": "🎉 Organización completa",
+		"description": "Title of the success modal shown after organizing completes"
+	},
+	"aiOrganizeModalSummary": {
+		"message": "Se organizaron {count} marcadores en {cats} categorías",
+		"description": "Summary line in the success modal; {count} bookmarks in {cats} categories"
+	},
+	"aiOrganizeModalHint": {
+		"message": "Organizado en la carpeta raíz 「AI分类」 de tu Gist. Haz clic en \"Descargar marcadores\" en la popup para sincronizar.",
+		"description": "Hint shown in the success modal telling user to download via popup"
+	},
+	"aiOrganizeModalClose": {
+		"message": "Cerrar",
+		"description": "Close button label on the success/failure modal"
+	},
+	"aiOrganizeFailed": {
+		"message": "❌ Error al organizar",
+		"description": "Title of the failure modal shown when the AI organize task fails"
+	},
+	"aiOrganizeMissingConfig": {
+		"message": "Configure primero Token / ID de Gist / Nombre de archivo",
+		"description": "Error message when token/gist/file-name config is missing"
+	},
+	"aiOrganizeStartHint": {
+		"message": "✅ Started. Results window will pop up automatically when done.",
+		"description": "Toast message shown after successfully starting the AI organize task"
+	},
+	"aiOrganizeRunning": {
+		"message": "IA organizando…",
+		"description": "Label shown on the Organize button while a task is running"
+	}
 }

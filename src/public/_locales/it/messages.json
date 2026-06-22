@@ -1,90 +1,307 @@
 {
-    "extensionName": {
-        "message": "BookmarkHub - Sincronizzazione segnalibri",
-        "description": ""
-    },
-    "extensionDescription": {
-        "message": "BookmarkHub, sincronizzazione dei segnalibri tra diversi browser",
-        "description": ""
-    },
-    "uploadBookmarks": {
-        "message": "Carica segnalibri",
-        "description": ""
-    },
-    "downloadBookmarks": {
-        "message": "Scarica segnalibri",
-        "description": ""
-    },
-    "syncBookmarks": {
-        "message": "Sincronizza segnalibri",
-        "description": ""
-    },
-    "removeAllBookmarks": {
-        "message": "Rimuovi tutti i segnalibri",
-        "description": ""
-    },
-    "settings": {
-        "message": "Impostazioni",
-        "description": ""
-    },
-    "help": {
-        "message": "Aiuto",
-        "description": ""
-    },
-    "localCount": {
-        "message": "Numero di segnalibri locali",
-        "description": ""
-    },
-    "remoteCount": {
-        "message": "Numero di segnalibri remoti",
-        "description": ""
-    },
-    "githubToken": {
-        "message": "Token GitHub",
-        "description": ""
-    },
-    "gistID": {
-        "message": "ID Gist",
-        "description": ""
-    },
-    "gistFileName": {
-        "message": "Nome file Gist",
-        "description": ""
-    },
-    "enableNotifications": {
-        "message": "Abilita notifiche",
-        "description": ""
-    },
-    "success": {
-        "message": "Successo",
-        "description": ""
-    },
-    "failed": {
-        "message": "Fallimento",
-        "description": ""
-    },
-    "error": {
-        "message": "Errore",
-        "description": ""
-    },
-    "author": {
-        "message": "Autore",
-        "description": ""
-    },
-    "uploadBookmarksDesc": {
-        "message": "Carica tutti i segnalibri del browser locale sul server",
-        "description": ""
-    },
-    "downloadBookmarksDesc": {
-        "message": "Elimina prima i segnalibri del browser locale e poi scarica tutti i segnalibri dal server sul browser locale",
-        "description": ""
-    },
-    "syncBookmarksDesc": {
-        "message": "Unisci tutti i segnalibri del server nel browser locale e poi caricali sul server",
-        "description": ""
-    },
-    "removeAllBookmarksDesc": {
-        "message": "Rimuovi tutti i segnalibri. Fai prima un backup.",
-        "description": ""
-    }
+	"extensionName": {
+		"message": "BookmarkHub - Sincronizzazione segnalibri",
+		"description": ""
+	},
+	"extensionDescription": {
+		"message": "BookmarkHub, sincronizzazione dei segnalibri tra diversi browser",
+		"description": ""
+	},
+	"uploadBookmarks": {
+		"message": "Carica segnalibri",
+		"description": ""
+	},
+	"downloadBookmarks": {
+		"message": "Scarica segnalibri",
+		"description": ""
+	},
+	"syncBookmarks": {
+		"message": "Sincronizza segnalibri",
+		"description": ""
+	},
+	"removeAllBookmarks": {
+		"message": "Rimuovi tutti i segnalibri",
+		"description": ""
+	},
+	"settings": {
+		"message": "Impostazioni",
+		"description": ""
+	},
+	"help": {
+		"message": "Aiuto",
+		"description": ""
+	},
+	"localCount": {
+		"message": "Numero di segnalibri locali",
+		"description": ""
+	},
+	"remoteCount": {
+		"message": "Numero di segnalibri remoti",
+		"description": ""
+	},
+	"githubToken": {
+		"message": "Token GitHub",
+		"description": ""
+	},
+	"gistID": {
+		"message": "ID Gist",
+		"description": ""
+	},
+	"gistFileName": {
+		"message": "Nome file Gist",
+		"description": ""
+	},
+	"enableNotifications": {
+		"message": "Abilita notifiche",
+		"description": ""
+	},
+	"success": {
+		"message": "Successo",
+		"description": ""
+	},
+	"failed": {
+		"message": "Fallimento",
+		"description": ""
+	},
+	"error": {
+		"message": "Errore",
+		"description": ""
+	},
+	"author": {
+		"message": "Autore",
+		"description": ""
+	},
+	"uploadBookmarksDesc": {
+		"message": "Carica tutti i segnalibri del browser locale sul server",
+		"description": ""
+	},
+	"downloadBookmarksDesc": {
+		"message": "Elimina prima i segnalibri del browser locale e poi scarica tutti i segnalibri dal server sul browser locale",
+		"description": ""
+	},
+	"syncBookmarksDesc": {
+		"message": "Unisci tutti i segnalibri del server nel browser locale e poi caricali sul server",
+		"description": ""
+	},
+	"removeAllBookmarksDesc": {
+		"message": "Rimuovi tutti i segnalibri. Fai prima un backup.",
+		"description": ""
+	},
+	"autoSyncTitle": {
+		"message": "Scheduled Auto Sync",
+		"description": ""
+	},
+	"autoSyncMissingConfig": {
+		"message": "Please fill in Token / Gist ID / File Name in settings first",
+		"description": ""
+	},
+	"autoSyncSection": {
+		"message": "Scheduled Auto Sync",
+		"description": ""
+	},
+	"autoSyncEnable": {
+		"message": "Enable Auto Sync",
+		"description": ""
+	},
+	"autoSyncEnableDesc": {
+		"message": "Sync bookmarks between local and Gist on a schedule",
+		"description": ""
+	},
+	"autoSyncInterval": {
+		"message": "Sync Interval",
+		"description": ""
+	},
+	"autoSyncDirection": {
+		"message": "Sync Direction",
+		"description": ""
+	},
+	"autoSyncDirBoth": {
+		"message": "Bidirectional (download then upload)",
+		"description": ""
+	},
+	"autoSyncDirUpload": {
+		"message": "Upload only (local → Gist)",
+		"description": ""
+	},
+	"autoSyncDirDownload": {
+		"message": "Download only (Gist → local)",
+		"description": ""
+	},
+	"autoSyncOnStartup": {
+		"message": "Sync on Browser Startup",
+		"description": ""
+	},
+	"autoSyncOnStartupDesc": {
+		"message": "Trigger a sync immediately when browser starts",
+		"description": ""
+	},
+	"autoSyncLastTime": {
+		"message": "Last Auto Sync",
+		"description": ""
+	},
+	"autoSyncRunNow": {
+		"message": "Run Now",
+		"description": ""
+	},
+	"autoSyncSave": {
+		"message": "Save",
+		"description": ""
+	},
+	"autoSyncSaved": {
+		"message": "Saved, auto sync settings applied",
+		"description": ""
+	},
+	"autoSyncSaveError": {
+		"message": "Saved, but failed to notify background",
+		"description": ""
+	},
+	"autoSyncNever": {
+		"message": "Never",
+		"description": ""
+	},
+	"lastSync": {
+		"message": "Last Sync",
+		"description": ""
+	},
+	"lastSyncNotYet": {
+		"message": "Not yet updated",
+		"description": ""
+	},
+	"lastSyncSourceAuto": {
+		"message": "Auto",
+		"description": ""
+	},
+	"lastSyncSourceManual": {
+		"message": "Manual",
+		"description": ""
+	},
+	"autoSyncInterval_15m": {
+		"message": "15 minutes",
+		"description": "Auto sync interval option: 15 minutes"
+	},
+	"autoSyncInterval_30m": {
+		"message": "30 minutes",
+		"description": "Auto sync interval option: 30 minutes"
+	},
+	"autoSyncInterval_1h": {
+		"message": "1 hour",
+		"description": "Auto sync interval option: 1 hour"
+	},
+	"autoSyncInterval_2h": {
+		"message": "2 hours",
+		"description": "Auto sync interval option: 2 hours"
+	},
+	"autoSyncInterval_6h": {
+		"message": "6 hours",
+		"description": "Auto sync interval option: 6 hours"
+	},
+	"autoSyncInterval_12h": {
+		"message": "12 hours",
+		"description": "Auto sync interval option: 12 hours"
+	},
+	"autoSyncInterval_24h": {
+		"message": "24 hours",
+		"description": "Auto sync interval option: 24 hours"
+	},
+	"autoSyncInterval_48h": {
+		"message": "48 hours",
+		"description": "Auto sync interval option: 48 hours"
+	},
+	"autoSyncInterval_72h": {
+		"message": "72 hours",
+		"description": "Auto sync interval option: 72 hours"
+	},
+	"autoSyncRunning": {
+		"message": "⏳ Syncing..."
+	},
+	"autoSyncRunSuccess": {
+		"message": "✅ Synced at "
+	},
+	"autoSyncRunDone": {
+		"message": "✅ Sync completed"
+	},
+	"autoSyncRunError": {
+		"message": "❌ Sync failed: "
+	},
+	"viewGist": {
+		"message": "Visualizza Gist"
+	},
+	"viewGistTitle": {
+		"message": "Visualizza il file dei segnalibri sincronizzato su GitHub"
+	},
+	"viewGistHint": {
+		"message": "Inserisci prima l'ID del Gist"
+	},
+	"githubTokenHelp": {
+		"message": "È richiesto un Personal Access Token (classic) con ambito 'gist'.",
+		"description": "Suggerimento mostrato sotto il campo Token GitHub"
+	},
+	"getToken": {
+		"message": "Ottieni Token",
+		"description": "Pulsante per aprire la pagina delle impostazioni del token GitHub"
+	},
+	"createNewGist": {
+		"message": "📝 Crea nuovo Gist",
+		"description": "Link per aprire gist.github.com"
+	},
+	"gistIDHelp": {
+		"message": "Incolla solo la parte ID del tuo URL Gist (es. per gist.github.com/<ID>, copia solo la parte <ID>, non l'URL completo).",
+		"description": "Suggerimento mostrato sotto il campo ID Gist"
+	},
+	"aiOrganizeSection": {
+		"message": "🤖 Organizza segnalibri con IA",
+		"description": "Options page advanced features section title"
+	},
+	"aiOrganizeBackendUrl": {
+		"message": "URL del backend IA",
+		"description": "Label for the backend service URL input in advanced features"
+	},
+	"aiOrganizeBackendUrlHelp": {
+		"message": "Predefinito http://103.11.78.250:18903. Modifica se ospiti il tuo backend.",
+		"description": "Help text shown below the backend URL input"
+	},
+	"aiOrganizeRunButton": {
+		"message": "Organizza segnalibri",
+		"description": "Button that triggers the AI organize task"
+	},
+	"aiOrganizeRunningTitle": {
+		"message": "🤖 Organizzazione IA in corso…",
+		"description": "Title of the progress bar shown in the popup during the task"
+	},
+	"aiOrganizeProgressLabel": {
+		"message": "{current} / {total} completati ({step})",
+		"description": "Progress text template; {current}/{total} done, {step} shown"
+	},
+	"aiOrganizeModalTitle": {
+		"message": "🎉 Organizzazione completata",
+		"description": "Title of the success modal shown after organizing completes"
+	},
+	"aiOrganizeModalSummary": {
+		"message": "Organizzati {count} segnalibri in {cats} categorie",
+		"description": "Summary line in the success modal; {count} bookmarks in {cats} categories"
+	},
+	"aiOrganizeModalHint": {
+		"message": "Organizzato nella cartella radice 「AI分类」 del tuo Gist. Clicca su \"Scarica segnalibri\" nella popup per sincronizzare.",
+		"description": "Hint shown in the success modal telling user to download via popup"
+	},
+	"aiOrganizeModalClose": {
+		"message": "Chiudi",
+		"description": "Close button label on the success/failure modal"
+	},
+	"aiOrganizeFailed": {
+		"message": "❌ Organizzazione fallita",
+		"description": "Title of the failure modal shown when the AI organize task fails"
+	},
+	"aiOrganizeMissingConfig": {
+		"message": "Configura prima Token / Gist ID / Nome file",
+		"description": "Error message when token/gist/file-name config is missing"
+	},
+	"aiOrganizeStartHint": {
+		"message": "✅ Started. Results window will pop up automatically when done.",
+		"description": "Toast message shown after successfully starting the AI organize task"
+	},
+	"aiOrganizeRunning": {
+		"message": "IA in corso…",
+		"description": "Label shown on the Organize button while a task is running"
+	}
 }

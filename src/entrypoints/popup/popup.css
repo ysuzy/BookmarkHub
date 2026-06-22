@@ -1,8 +1,45 @@
-#root {
-    width: 15rem;
-    min-height: 11rem;
+/* BookmarkHub 弹框自适应布局
+ * 目标：浏览器能完整显示内容时，不出现上下、左右滚动条
+ *
+ * 策略：
+ * 1. html/body 不要设置固定 height/width，也不要默认 margin
+ * 2. #root 使用 inline-block（shrink-wrap）自然贴合内容
+ * 3. 用 min-width / max-width 限定宽度区间，避免极端情况
+ * 4. dropdown-menu 跟随 #root 宽度
+ */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    width: auto;
     height: auto;
-    position: relative;
+}
+
+body {
+    /* 弹框宿主：根据内容自适应，不撑满视口 */
+    display: table;
+    min-width: 0;
+    min-height: 0;
+}
+
+#root {
+    /* 关键：inline-block 让元素 shrink-wrap 到内容尺寸 */
+    display: inline-block;
+    /* 宽度自适应内容 */
+    width: auto;
+    /* 最小宽度，避免空内容时弹框过窄 */
+    min-width: 14rem;
+    /* 最大宽度：限制为视口宽度的 90%，避免极宽显示器下弹框过宽 */
+    max-width: min(28rem, 90vw);
+    /* 高度由内容决定 */
+    height: auto;
+    min-height: 0;
+    /* 不产生滚动条 */
+    overflow: visible;
+    /* 包含子元素（处理 BFC） */
+    box-sizing: border-box;
 }
 
 .list-group-item {
@@ -17,7 +54,17 @@
     opacity: 1 !important;
     pointer-events: auto !important;
     border: none !important;
+    /* 跟随 #root 的自适应宽度 */
     width: 100% !important;
+    /* 弹框内菜单也自适应，不出现竖向滚动条 */
+    max-height: none;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 显式声明在文档流中（不被绝对定位抢走 #root 高度） */
+    position: static !important;
+    transform: none !important;
 }
 
 .dropdown-item,
@@ -25,16 +72,196 @@
     font-size: 12px !important;
     padding: .5rem 1rem !important;
     vertical-align: middle !important;
+    /* 长文本不换行也不溢出 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* flex 让图标和文字垂直居中 */
+    display: flex !important;
+    align-items: center;
+    gap: 6px;
 }
 
 .dropdown-item-icon {
     vertical-align: middle;
-    margin-right: 5px;
+    margin-right: 0;
     width: 1.1rem;
     height: 1.1rem;
+    flex-shrink: 0;
 }
 
 .dropdown-item a,
 .dropdown-item-text a {
     color: inherit;
+}
+
+/* =============== 同步时间行（无刷新按钮） =============== */
+.popup-last-sync {
+    /* 跟其它 ItemText 一致，但更小一些 */
+    font-size: 11px !important;
+    padding: .25rem 1rem !important;
+    /* 跟下面的 footer 用更浅的灰色分隔 */
+    border-top: 1px dashed rgba(0, 0, 0, 0.08);
+    color: #555;
+    /* 让它在窄弹框里能换行 */
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    line-height: 1.4;
+}
+
+/* 已同步时间：普通灰 */
+.sync-time-real {
+    color: #333;
+    font-weight: 500;
+}
+
+/* 还未更新：红色斜体，醒目提示 */
+.sync-time-not-yet {
+    color: #d9534f;
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* 触发源标签：auto 绿底，manual 蓝底 */
+.sync-source {
+    display: inline-block;
+    padding: 0 4px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-left: 2px;
+    vertical-align: middle;
+}
+.sync-source-auto {
+    background: #d4edda;
+    color: #155724;
+}
+.sync-source-manual {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+/* =============== AI 整理书签：进度条 / 提示 =============== */
+.ai-organize-progress {
+    /* 顶部小条，限制宽度跟随 popup */
+    padding: 8px 12px 6px 12px;
+    background: linear-gradient(135deg, #eef2ff 0%, #f5f3ff 100%);
+    border-bottom: 1px solid #c7d2fe;
+    font-size: 12px;
+    color: #312e81;
+    box-sizing: border-box;
+}
+
+.ai-organize-progress-title {
+    font-weight: 600;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.ai-organize-progress-text {
+    font-size: 11px;
+    color: #4f46e5;
+    margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ai-organize-hint {
+    padding: 4px 12px;
+    background: #d4edda;
+    color: #155724;
+    font-size: 11px;
+    text-align: center;
+    border-bottom: 1px solid #c3e6cb;
+}
+
+/* =============== AI 整理结果模态框 =============== */
+.ai-organize-modal .modal-dialog {
+    /* popup 是个小窗口，模态框要适配 */
+    max-width: 22rem;
+    margin: 1rem auto;
+}
+
+.ai-organize-summary {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    background: #f0fdf4;
+    border-left: 3px solid #22c55e;
+    border-radius: 3px;
+}
+
+.ai-organize-cat-list {
+    max-height: 180px;
+    overflow-y: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 4px 0;
+    background: #fafafa;
+}
+
+.ai-organize-cat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 10px;
+    font-size: 12px;
+    border-bottom: 1px solid #f1f5f9;
+}
+.ai-organize-cat-row:last-child {
+    border-bottom: none;
+}
+.ai-organize-cat-row:nth-child(odd) {
+    background: #f8fafc;
+}
+
+.ai-organize-cat-name {
+    color: #334155;
+    font-weight: 500;
+}
+
+.ai-organize-cat-count {
+    color: #6366f1;
+    font-weight: 600;
+    font-size: 11px;
+    background: #eef2ff;
+    padding: 1px 8px;
+    border-radius: 10px;
+}
+
+.ai-organize-hint-line {
+    margin-top: 10px;
+    padding: 6px 10px;
+    background: #fffbeb;
+    border-left: 3px solid #f59e0b;
+    font-size: 11px;
+    color: #78350f;
+    border-radius: 3px;
+    line-height: 1.4;
+}
+
+.ai-organize-error {
+    padding: 10px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 4px;
+    color: #991b1b;
+    font-size: 12px;
+    word-break: break-word;
+    line-height: 1.5;
+    font-family: 'SF Mono', Consolas, monospace;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* 弹窗里的按钮"在弹窗中点立即同步" - 高亮"下载书签" */
+.ai-organize-modal .modal-footer {
+    justify-content: flex-end;
 }

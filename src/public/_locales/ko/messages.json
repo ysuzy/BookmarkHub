@@ -1,90 +1,307 @@
 {
-    "extensionName": {
-        "message": "BookmarkHub - 북마크 동기화",
-        "description": ""
-    },
-    "extensionDescription": {
-        "message": "BookmarkHub, 다양한 브라우저 간 북마크 동기화",
-        "description": ""
-    },
-    "uploadBookmarks": {
-        "message": "북마크 업로드",
-        "description": ""
-    },
-    "downloadBookmarks": {
-        "message": "북마크 다운로드",
-        "description": ""
-    },
-    "syncBookmarks": {
-        "message": "북마크 동기화",
-        "description": ""
-    },
-    "removeAllBookmarks": {
-        "message": "모든 북마크 삭제",
-        "description": ""
-    },
-    "settings": {
-        "message": "설정",
-        "description": ""
-    },
-    "help": {
-        "message": "도움말",
-        "description": ""
-    },
-    "localCount": {
-        "message": "로컬 북마크 수",
-        "description": ""
-    },
-    "remoteCount": {
-        "message": "원격 북마크 수",
-        "description": ""
-    },
-    "githubToken": {
-        "message": "GitHub 토큰",
-        "description": ""
-    },
-    "gistID": {
-        "message": "Gist ID",
-        "description": ""
-    },
-    "gistFileName": {
-        "message": "Gist 파일명",
-        "description": ""
-    },
-    "enableNotifications": {
-        "message": "알림 활성화",
-        "description": ""
-    },
-    "success": {
-        "message": "성공",
-        "description": ""
-    },
-    "failed": {
-        "message": "실패",
-        "description": ""
-    },
-    "error": {
-        "message": "오류",
-        "description": ""
-    },
-    "author": {
-        "message": "작성자",
-        "description": ""
-    },
-    "uploadBookmarksDesc": {
-        "message": "로컬 브라우저의 모든 북마크를 서버로 업로드",
-        "description": ""
-    },
-    "downloadBookmarksDesc": {
-        "message": "먼저 로컬 브라우저의 북마크를 삭제한 후, 서버의 모든 북마크를 로컬 브라우저로 다운로드",
-        "description": ""
-    },
-    "syncBookmarksDesc": {
-        "message": "서버의 모든 북마크를 로컬 브라우저에 병합한 후, 서버로 업로드",
-        "description": ""
-    },
-    "removeAllBookmarksDesc": {
-        "message": "모든 북마크를 삭제합니다. 사전에 백업하세요.",
-        "description": ""
-    }
+	"extensionName": {
+		"message": "BookmarkHub - 북마크 동기화",
+		"description": ""
+	},
+	"extensionDescription": {
+		"message": "BookmarkHub, 다양한 브라우저 간 북마크 동기화",
+		"description": ""
+	},
+	"uploadBookmarks": {
+		"message": "북마크 업로드",
+		"description": ""
+	},
+	"downloadBookmarks": {
+		"message": "북마크 다운로드",
+		"description": ""
+	},
+	"syncBookmarks": {
+		"message": "북마크 동기화",
+		"description": ""
+	},
+	"removeAllBookmarks": {
+		"message": "모든 북마크 삭제",
+		"description": ""
+	},
+	"settings": {
+		"message": "설정",
+		"description": ""
+	},
+	"help": {
+		"message": "도움말",
+		"description": ""
+	},
+	"localCount": {
+		"message": "로컬 북마크 수",
+		"description": ""
+	},
+	"remoteCount": {
+		"message": "원격 북마크 수",
+		"description": ""
+	},
+	"githubToken": {
+		"message": "GitHub 토큰",
+		"description": ""
+	},
+	"gistID": {
+		"message": "Gist ID",
+		"description": ""
+	},
+	"gistFileName": {
+		"message": "Gist 파일명",
+		"description": ""
+	},
+	"enableNotifications": {
+		"message": "알림 활성화",
+		"description": ""
+	},
+	"success": {
+		"message": "성공",
+		"description": ""
+	},
+	"failed": {
+		"message": "실패",
+		"description": ""
+	},
+	"error": {
+		"message": "오류",
+		"description": ""
+	},
+	"author": {
+		"message": "작성자",
+		"description": ""
+	},
+	"uploadBookmarksDesc": {
+		"message": "로컬 브라우저의 모든 북마크를 서버로 업로드",
+		"description": ""
+	},
+	"downloadBookmarksDesc": {
+		"message": "먼저 로컬 브라우저의 북마크를 삭제한 후, 서버의 모든 북마크를 로컬 브라우저로 다운로드",
+		"description": ""
+	},
+	"syncBookmarksDesc": {
+		"message": "서버의 모든 북마크를 로컬 브라우저에 병합한 후, 서버로 업로드",
+		"description": ""
+	},
+	"removeAllBookmarksDesc": {
+		"message": "모든 북마크를 삭제합니다. 사전에 백업하세요.",
+		"description": ""
+	},
+	"autoSyncTitle": {
+		"message": "Scheduled Auto Sync",
+		"description": ""
+	},
+	"autoSyncMissingConfig": {
+		"message": "Please fill in Token / Gist ID / File Name in settings first",
+		"description": ""
+	},
+	"autoSyncSection": {
+		"message": "Scheduled Auto Sync",
+		"description": ""
+	},
+	"autoSyncEnable": {
+		"message": "Enable Auto Sync",
+		"description": ""
+	},
+	"autoSyncEnableDesc": {
+		"message": "Sync bookmarks between local and Gist on a schedule",
+		"description": ""
+	},
+	"autoSyncInterval": {
+		"message": "Sync Interval",
+		"description": ""
+	},
+	"autoSyncDirection": {
+		"message": "Sync Direction",
+		"description": ""
+	},
+	"autoSyncDirBoth": {
+		"message": "Bidirectional (download then upload)",
+		"description": ""
+	},
+	"autoSyncDirUpload": {
+		"message": "Upload only (local → Gist)",
+		"description": ""
+	},
+	"autoSyncDirDownload": {
+		"message": "Download only (Gist → local)",
+		"description": ""
+	},
+	"autoSyncOnStartup": {
+		"message": "Sync on Browser Startup",
+		"description": ""
+	},
+	"autoSyncOnStartupDesc": {
+		"message": "Trigger a sync immediately when browser starts",
+		"description": ""
+	},
+	"autoSyncLastTime": {
+		"message": "Last Auto Sync",
+		"description": ""
+	},
+	"autoSyncRunNow": {
+		"message": "Run Now",
+		"description": ""
+	},
+	"autoSyncSave": {
+		"message": "Save",
+		"description": ""
+	},
+	"autoSyncSaved": {
+		"message": "Saved, auto sync settings applied",
+		"description": ""
+	},
+	"autoSyncSaveError": {
+		"message": "Saved, but failed to notify background",
+		"description": ""
+	},
+	"autoSyncNever": {
+		"message": "Never",
+		"description": ""
+	},
+	"lastSync": {
+		"message": "Last Sync",
+		"description": ""
+	},
+	"lastSyncNotYet": {
+		"message": "Not yet updated",
+		"description": ""
+	},
+	"lastSyncSourceAuto": {
+		"message": "Auto",
+		"description": ""
+	},
+	"lastSyncSourceManual": {
+		"message": "Manual",
+		"description": ""
+	},
+	"autoSyncInterval_15m": {
+		"message": "15 minutes",
+		"description": "Auto sync interval option: 15 minutes"
+	},
+	"autoSyncInterval_30m": {
+		"message": "30 minutes",
+		"description": "Auto sync interval option: 30 minutes"
+	},
+	"autoSyncInterval_1h": {
+		"message": "1 hour",
+		"description": "Auto sync interval option: 1 hour"
+	},
+	"autoSyncInterval_2h": {
+		"message": "2 hours",
+		"description": "Auto sync interval option: 2 hours"
+	},
+	"autoSyncInterval_6h": {
+		"message": "6 hours",
+		"description": "Auto sync interval option: 6 hours"
+	},
+	"autoSyncInterval_12h": {
+		"message": "12 hours",
+		"description": "Auto sync interval option: 12 hours"
+	},
+	"autoSyncInterval_24h": {
+		"message": "24 hours",
+		"description": "Auto sync interval option: 24 hours"
+	},
+	"autoSyncInterval_48h": {
+		"message": "48 hours",
+		"description": "Auto sync interval option: 48 hours"
+	},
+	"autoSyncInterval_72h": {
+		"message": "72 hours",
+		"description": "Auto sync interval option: 72 hours"
+	},
+	"autoSyncRunning": {
+		"message": "⏳ Syncing..."
+	},
+	"autoSyncRunSuccess": {
+		"message": "✅ Synced at "
+	},
+	"autoSyncRunDone": {
+		"message": "✅ Sync completed"
+	},
+	"autoSyncRunError": {
+		"message": "❌ Sync failed: "
+	},
+	"viewGist": {
+		"message": "Gist 보기"
+	},
+	"viewGistTitle": {
+		"message": "GitHub에서 동기화된 북마크 파일 보기"
+	},
+	"viewGistHint": {
+		"message": "먼저 Gist ID를 입력하세요"
+	},
+	"githubTokenHelp": {
+		"message": "'gist' 범위가 있는 Personal Access Token (classic)이 필요합니다.",
+		"description": "GitHub Token 필드 아래에 표시되는 도움말"
+	},
+	"getToken": {
+		"message": "토큰 받기",
+		"description": "GitHub 토큰 설정 페이지를 여는 버튼"
+	},
+	"createNewGist": {
+		"message": "📝 새 Gist 만들기",
+		"description": "gist.github.com에서 새 Gist를 만드는 링크"
+	},
+	"gistIDHelp": {
+		"message": "Gist URL의 ID 부분만 붙여넣으세요(예: gist.github.com/<ID>에서 <ID> 부분만, 전체 URL 아님).",
+		"description": "Gist ID 필드 아래에 표시되는 도움말"
+	},
+	"aiOrganizeSection": {
+		"message": "🤖 AI 북마크 정리",
+		"description": "Options page advanced features section title"
+	},
+	"aiOrganizeBackendUrl": {
+		"message": "AI 정리 백엔드 URL",
+		"description": "Label for the backend service URL input in advanced features"
+	},
+	"aiOrganizeBackendUrlHelp": {
+		"message": "기본값은 http://103.11.78.250:18903입니다. 자체 호스팅 시 변경하세요.",
+		"description": "Help text shown below the backend URL input"
+	},
+	"aiOrganizeRunButton": {
+		"message": "북마크 정리",
+		"description": "Button that triggers the AI organize task"
+	},
+	"aiOrganizeRunningTitle": {
+		"message": "🤖 AI 정리 중…",
+		"description": "Title of the progress bar shown in the popup during the task"
+	},
+	"aiOrganizeProgressLabel": {
+		"message": "{current} / {total} 완료 ({step})",
+		"description": "Progress text template; {current}/{total} done, {step} shown"
+	},
+	"aiOrganizeModalTitle": {
+		"message": "🎉 정리 완료",
+		"description": "Title of the success modal shown after organizing completes"
+	},
+	"aiOrganizeModalSummary": {
+		"message": "{count}개 북마크를 {cats}개 카테고리로 정리했습니다",
+		"description": "Summary line in the success modal; {count} bookmarks in {cats} categories"
+	},
+	"aiOrganizeModalHint": {
+		"message": "Gist의 「AI分类」 루트 폴더에 정리되었습니다. 팝업에서 \"북마크 다운로드\"를 클릭하여 동기화하세요.",
+		"description": "Hint shown in the success modal telling user to download via popup"
+	},
+	"aiOrganizeModalClose": {
+		"message": "닫기",
+		"description": "Close button label on the success/failure modal"
+	},
+	"aiOrganizeFailed": {
+		"message": "❌ 정리 실패",
+		"description": "Title of the failure modal shown when the AI organize task fails"
+	},
+	"aiOrganizeMissingConfig": {
+		"message": "먼저 Token / Gist ID / 파일 이름을 설정하세요",
+		"description": "Error message when token/gist/file-name config is missing"
+	},
+	"aiOrganizeStartHint": {
+		"message": "✅ Started. Results window will pop up automatically when done.",
+		"description": "Toast message shown after successfully starting the AI organize task"
+	},
+	"aiOrganizeRunning": {
+		"message": "AI 정리 중…",
+		"description": "Label shown on the Organize button while a task is running"
+	}
 }

@@ -1,90 +1,307 @@
 {
-    "extensionName": {
-        "message": "BookmarkHub - synchroniser les signets",
-        "description": ""
-    },
-    "extensionDescription": {
-        "message": "BookmarkHub, synchroniser les signets entre différents navigateurs",
-        "description": ""
-    },
-    "uploadBookmarks": {
-        "message": "Télécharger les signets",
-        "description": ""
-    },
-    "downloadBookmarks": {
-        "message": "Télécharger les signets",
-        "description": ""
-    },
-    "syncBookmarks": {
-        "message": "Synchroniser les signets",
-        "description": ""
-    },
-    "removeAllBookmarks": {
-        "message": "Supprimer tous les signets",
-        "description": ""
-    },
-    "settings": {
-        "message": "Paramètres",
-        "description": ""
-    },
-    "help": {
-        "message": "Aide",
-        "description": ""
-    },
-    "localCount": {
-        "message": "Nombre de signets locaux",
-        "description": ""
-    },
-    "remoteCount": {
-        "message": "Nombre de signets distants",
-        "description": ""
-    },
-    "githubToken": {
-        "message": "Jetons GitHub",
-        "description": ""
-    },
-    "gistID": {
-        "message": "ID Gist",
-        "description": ""
-    },
-    "gistFileName": {
-        "message": "Nom de fichier Gist",
-        "description": ""
-    },
-    "enableNotifications": {
-        "message": "Activer les notifications",
-        "description": ""
-    },
-    "success": {
-        "message": "Succès",
-        "description": ""
-    },
-    "failed": {
-        "message": "Échoué",
-        "description": ""
-    },
-    "error": {
-        "message": "Erreur",
-        "description": ""
-    },
-    "author": {
-        "message": "Auteur",
-        "description": ""
-    },
-    "uploadBookmarksDesc": {
-        "message": "Télécharger tous les signets du navigateur local vers le serveur",
-        "description": ""
-    },
-    "downloadBookmarksDesc": {
-        "message": "Supprimez d'abord les signets du navigateur local, puis téléchargez tous les signets du serveur vers le navigateur local",
-        "description": ""
-    },
-    "syncBookmarksDesc": {
-        "message": "Fusionnez tous les signets du serveur dans le navigateur local, puis téléchargez-les vers le serveur",
-        "description": ""
-    },
-    "removeAllBookmarksDesc": {
-        "message": "Supprimez tous les signets. Veuillez effectuer une sauvegarde au préalable.",
-        "description": ""
-    }
+	"extensionName": {
+		"message": "BookmarkHub - synchroniser les signets",
+		"description": ""
+	},
+	"extensionDescription": {
+		"message": "BookmarkHub, synchroniser les signets entre différents navigateurs",
+		"description": ""
+	},
+	"uploadBookmarks": {
+		"message": "Télécharger les signets",
+		"description": ""
+	},
+	"downloadBookmarks": {
+		"message": "Télécharger les signets",
+		"description": ""
+	},
+	"syncBookmarks": {
+		"message": "Synchroniser les signets",
+		"description": ""
+	},
+	"removeAllBookmarks": {
+		"message": "Supprimer tous les signets",
+		"description": ""
+	},
+	"settings": {
+		"message": "Paramètres",
+		"description": ""
+	},
+	"help": {
+		"message": "Aide",
+		"description": ""
+	},
+	"localCount": {
+		"message": "Nombre de signets locaux",
+		"description": ""
+	},
+	"remoteCount": {
+		"message": "Nombre de signets distants",
+		"description": ""
+	},
+	"githubToken": {
+		"message": "Jetons GitHub",
+		"description": ""
+	},
+	"gistID": {
+		"message": "ID Gist",
+		"description": ""
+	},
+	"gistFileName": {
+		"message": "Nom de fichier Gist",
+		"description": ""
+	},
+	"enableNotifications": {
+		"message": "Activer les notifications",
+		"description": ""
+	},
+	"success": {
+		"message": "Succès",
+		"description": ""
+	},
+	"failed": {
+		"message": "Échoué",
+		"description": ""
+	},
+	"error": {
+		"message": "Erreur",
+		"description": ""
+	},
+	"author": {
+		"message": "Auteur",
+		"description": ""
+	},
+	"uploadBookmarksDesc": {
+		"message": "Télécharger tous les signets du navigateur local vers le serveur",
+		"description": ""
+	},
+	"downloadBookmarksDesc": {
+		"message": "Supprimez d'abord les signets du navigateur local, puis téléchargez tous les signets du serveur vers le navigateur local",
+		"description": ""
+	},
+	"syncBookmarksDesc": {
+		"message": "Fusionnez tous les signets du serveur dans le navigateur local, puis téléchargez-les vers le serveur",
+		"description": ""
+	},
+	"removeAllBookmarksDesc": {
+		"message": "Supprimez tous les signets. Veuillez effectuer une sauvegarde au préalable.",
+		"description": ""
+	},
+	"autoSyncTitle": {
+		"message": "Scheduled Auto Sync",
+		"description": ""
+	},
+	"autoSyncMissingConfig": {
+		"message": "Please fill in Token / Gist ID / File Name in settings first",
+		"description": ""
+	},
+	"autoSyncSection": {
+		"message": "Scheduled Auto Sync",
+		"description": ""
+	},
+	"autoSyncEnable": {
+		"message": "Enable Auto Sync",
+		"description": ""
+	},
+	"autoSyncEnableDesc": {
+		"message": "Sync bookmarks between local and Gist on a schedule",
+		"description": ""
+	},
+	"autoSyncInterval": {
+		"message": "Sync Interval",
+		"description": ""
+	},
+	"autoSyncDirection": {
+		"message": "Sync Direction",
+		"description": ""
+	},
+	"autoSyncDirBoth": {
+		"message": "Bidirectional (download then upload)",
+		"description": ""
+	},
+	"autoSyncDirUpload": {
+		"message": "Upload only (local → Gist)",
+		"description": ""
+	},
+	"autoSyncDirDownload": {
+		"message": "Download only (Gist → local)",
+		"description": ""
+	},
+	"autoSyncOnStartup": {
+		"message": "Sync on Browser Startup",
+		"description": ""
+	},
+	"autoSyncOnStartupDesc": {
+		"message": "Trigger a sync immediately when browser starts",
+		"description": ""
+	},
+	"autoSyncLastTime": {
+		"message": "Last Auto Sync",
+		"description": ""
+	},
+	"autoSyncRunNow": {
+		"message": "Run Now",
+		"description": ""
+	},
+	"autoSyncSave": {
+		"message": "Save",
+		"description": ""
+	},
+	"autoSyncSaved": {
+		"message": "Saved, auto sync settings applied",
+		"description": ""
+	},
+	"autoSyncSaveError": {
+		"message": "Saved, but failed to notify background",
+		"description": ""
+	},
+	"autoSyncNever": {
+		"message": "Never",
+		"description": ""
+	},
+	"lastSync": {
+		"message": "Last Sync",
+		"description": ""
+	},
+	"lastSyncNotYet": {
+		"message": "Not yet updated",
+		"description": ""
+	},
+	"lastSyncSourceAuto": {
+		"message": "Auto",
+		"description": ""
+	},
+	"lastSyncSourceManual": {
+		"message": "Manual",
+		"description": ""
+	},
+	"autoSyncInterval_15m": {
+		"message": "15 minutes",
+		"description": "Auto sync interval option: 15 minutes"
+	},
+	"autoSyncInterval_30m": {
+		"message": "30 minutes",
+		"description": "Auto sync interval option: 30 minutes"
+	},
+	"autoSyncInterval_1h": {
+		"message": "1 hour",
+		"description": "Auto sync interval option: 1 hour"
+	},
+	"autoSyncInterval_2h": {
+		"message": "2 hours",
+		"description": "Auto sync interval option: 2 hours"
+	},
+	"autoSyncInterval_6h": {
+		"message": "6 hours",
+		"description": "Auto sync interval option: 6 hours"
+	},
+	"autoSyncInterval_12h": {
+		"message": "12 hours",
+		"description": "Auto sync interval option: 12 hours"
+	},
+	"autoSyncInterval_24h": {
+		"message": "24 hours",
+		"description": "Auto sync interval option: 24 hours"
+	},
+	"autoSyncInterval_48h": {
+		"message": "48 hours",
+		"description": "Auto sync interval option: 48 hours"
+	},
+	"autoSyncInterval_72h": {
+		"message": "72 hours",
+		"description": "Auto sync interval option: 72 hours"
+	},
+	"autoSyncRunning": {
+		"message": "⏳ Syncing..."
+	},
+	"autoSyncRunSuccess": {
+		"message": "✅ Synced at "
+	},
+	"autoSyncRunDone": {
+		"message": "✅ Sync completed"
+	},
+	"autoSyncRunError": {
+		"message": "❌ Sync failed: "
+	},
+	"viewGist": {
+		"message": "Voir le Gist"
+	},
+	"viewGistTitle": {
+		"message": "Voir le fichier de signets synchronisé sur GitHub"
+	},
+	"viewGistHint": {
+		"message": "Saisissez d'abord l'ID du Gist"
+	},
+	"githubTokenHelp": {
+		"message": "Un Personal Access Token (classic) avec le scope 'gist' est requis.",
+		"description": "Indice affiché sous le champ GitHub Token"
+	},
+	"getToken": {
+		"message": "Obtenir un Token",
+		"description": "Bouton pour ouvrir la page des paramètres de token GitHub"
+	},
+	"createNewGist": {
+		"message": "📝 Créer un nouveau Gist",
+		"description": "Lien pour ouvrir gist.github.com"
+	},
+	"gistIDHelp": {
+		"message": "Collez uniquement la partie ID de votre URL Gist (par ex. pour gist.github.com/<ID>, copiez juste la partie <ID>, pas l'URL complète).",
+		"description": "Indice affiché sous le champ Gist ID"
+	},
+	"aiOrganizeSection": {
+		"message": "🤖 Organiser les favoris par IA",
+		"description": "Options page advanced features section title"
+	},
+	"aiOrganizeBackendUrl": {
+		"message": "URL du backend IA",
+		"description": "Label for the backend service URL input in advanced features"
+	},
+	"aiOrganizeBackendUrlHelp": {
+		"message": "Par défaut http://103.11.78.250:18903. Modifiez cette valeur si vous auto-hébergez le backend.",
+		"description": "Help text shown below the backend URL input"
+	},
+	"aiOrganizeRunButton": {
+		"message": "Organiser les favoris",
+		"description": "Button that triggers the AI organize task"
+	},
+	"aiOrganizeRunningTitle": {
+		"message": "🤖 Organisation IA en cours…",
+		"description": "Title of the progress bar shown in the popup during the task"
+	},
+	"aiOrganizeProgressLabel": {
+		"message": "{current} / {total} terminés ({step})",
+		"description": "Progress text template; {current}/{total} done, {step} shown"
+	},
+	"aiOrganizeModalTitle": {
+		"message": "🎉 Organisation terminée",
+		"description": "Title of the success modal shown after organizing completes"
+	},
+	"aiOrganizeModalSummary": {
+		"message": "{count} favoris organisés en {cats} catégories",
+		"description": "Summary line in the success modal; {count} bookmarks in {cats} categories"
+	},
+	"aiOrganizeModalHint": {
+		"message": "Organisé dans le dossier racine 「AI分类」 de votre Gist. Cliquez sur « Télécharger les signets » dans la popup pour synchroniser.",
+		"description": "Hint shown in the success modal telling user to download via popup"
+	},
+	"aiOrganizeModalClose": {
+		"message": "Fermer",
+		"description": "Close button label on the success/failure modal"
+	},
+	"aiOrganizeFailed": {
+		"message": "❌ Échec de l'organisation",
+		"description": "Title of the failure modal shown when the AI organize task fails"
+	},
+	"aiOrganizeMissingConfig": {
+		"message": "Veuillez d'abord configurer Token / Gist ID / Nom de fichier",
+		"description": "Error message when token/gist/file-name config is missing"
+	},
+	"aiOrganizeStartHint": {
+		"message": "✅ Started. Results window will pop up automatically when done.",
+		"description": "Toast message shown after successfully starting the AI organize task"
+	},
+	"aiOrganizeRunning": {
+		"message": "IA en cours…",
+		"description": "Label shown on the Organize button while a task is running"
+	}
 }

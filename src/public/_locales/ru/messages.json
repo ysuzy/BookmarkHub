@@ -1,90 +1,307 @@
-﻿{
-    "extensionName": {
-        "message": "BookmarkHub - синхронизация закладок ",
-        "description": ""
-    },
-    "extensionDescription": {
-        "message": "BookmarkHub, синхронизация закладок между разными браузерами",
-        "description": ""
-    },
-    "uploadBookmarks": {
-        "message": "Выгрузить закладки",
-        "description": ""
-    },
-    "downloadBookmarks": {
-        "message": "Скачать закладки",
-        "description": ""
-    },
-    "syncBookmarks": {
-        "message": "Синхронизировать закладки",
-        "description": ""
-    },
-    "removeAllBookmarks": {
-        "message": "Удалить все закладки",
-        "description": ""
-    },
-    "settings": {
-        "message": "Настройки",
-        "description": ""
-    },
-    "help": {
-        "message": "Помощь",
-        "description": ""
-    },
-    "localCount": {
-        "message": "Количество локальных закладок",
-        "description": ""
-    },
-    "remoteCount": {
-        "message": "Количество закладок на сервере",
-        "description": ""
-    },
-    "githubToken": {
-        "message": "Github Token",
-        "description": ""
-    },
-    "gistID": {
-        "message": "Gist ID",
-        "description": ""
-    },
-    "gistFileName": {
-        "message": "Имя файла Gist",
-        "description": ""
-    },
-    "enableNotifications": {
-        "message": "Включить уведомления",
-        "description": ""
-    },
-    "success": {
-        "message": "Выполнено",
-        "description": ""
-    },
-    "failed": {
-        "message": "Сбой",
-        "description": ""
-    },
-    "error": {
-        "message": "Ошибка",
-        "description": ""
-    },
-    "author": {
-        "message": "Разработчик",
-        "description": ""
-    },
-    "uploadBookmarksDesc": {
-        "message": "Выгрузить все закладки из браузера на сервер",
-        "description": ""
-    },
-    "downloadBookmarksDesc": {
-        "message": "Сначала закладки в браузере очищаются, затем скачиваются с сервера",
-        "description": ""
-    },
-    "syncBookmarksDesc": {
-        "message": "Объединить закладки на сервере и браузере, а затем выгрузить их на сервер",
-        "description": ""
-    },
-    "removeAllBookmarksDesc": {
-        "message": "Удалить все закладки, пожалуйста сделайте резервную копию",
-        "description": ""
-    }
+{
+	"extensionName": {
+		"message": "BookmarkHub - синхронизация закладок ",
+		"description": ""
+	},
+	"extensionDescription": {
+		"message": "BookmarkHub, синхронизация закладок между разными браузерами",
+		"description": ""
+	},
+	"uploadBookmarks": {
+		"message": "Выгрузить закладки",
+		"description": ""
+	},
+	"downloadBookmarks": {
+		"message": "Скачать закладки",
+		"description": ""
+	},
+	"syncBookmarks": {
+		"message": "Синхронизировать закладки",
+		"description": ""
+	},
+	"removeAllBookmarks": {
+		"message": "Удалить все закладки",
+		"description": ""
+	},
+	"settings": {
+		"message": "Настройки",
+		"description": ""
+	},
+	"help": {
+		"message": "Помощь",
+		"description": ""
+	},
+	"localCount": {
+		"message": "Количество локальных закладок",
+		"description": ""
+	},
+	"remoteCount": {
+		"message": "Количество закладок на сервере",
+		"description": ""
+	},
+	"githubToken": {
+		"message": "Github Token",
+		"description": ""
+	},
+	"gistID": {
+		"message": "Gist ID",
+		"description": ""
+	},
+	"gistFileName": {
+		"message": "Имя файла Gist",
+		"description": ""
+	},
+	"enableNotifications": {
+		"message": "Включить уведомления",
+		"description": ""
+	},
+	"success": {
+		"message": "Выполнено",
+		"description": ""
+	},
+	"failed": {
+		"message": "Сбой",
+		"description": ""
+	},
+	"error": {
+		"message": "Ошибка",
+		"description": ""
+	},
+	"author": {
+		"message": "Разработчик",
+		"description": ""
+	},
+	"uploadBookmarksDesc": {
+		"message": "Выгрузить все закладки из браузера на сервер",
+		"description": ""
+	},
+	"downloadBookmarksDesc": {
+		"message": "Сначала закладки в браузере очищаются, затем скачиваются с сервера",
+		"description": ""
+	},
+	"syncBookmarksDesc": {
+		"message": "Объединить закладки на сервере и браузере, а затем выгрузить их на сервер",
+		"description": ""
+	},
+	"removeAllBookmarksDesc": {
+		"message": "Удалить все закладки, пожалуйста сделайте резервную копию",
+		"description": ""
+	},
+	"autoSyncTitle": {
+		"message": "Scheduled Auto Sync",
+		"description": ""
+	},
+	"autoSyncMissingConfig": {
+		"message": "Please fill in Token / Gist ID / File Name in settings first",
+		"description": ""
+	},
+	"autoSyncSection": {
+		"message": "Scheduled Auto Sync",
+		"description": ""
+	},
+	"autoSyncEnable": {
+		"message": "Enable Auto Sync",
+		"description": ""
+	},
+	"autoSyncEnableDesc": {
+		"message": "Sync bookmarks between local and Gist on a schedule",
+		"description": ""
+	},
+	"autoSyncInterval": {
+		"message": "Sync Interval",
+		"description": ""
+	},
+	"autoSyncDirection": {
+		"message": "Sync Direction",
+		"description": ""
+	},
+	"autoSyncDirBoth": {
+		"message": "Bidirectional (download then upload)",
+		"description": ""
+	},
+	"autoSyncDirUpload": {
+		"message": "Upload only (local → Gist)",
+		"description": ""
+	},
+	"autoSyncDirDownload": {
+		"message": "Download only (Gist → local)",
+		"description": ""
+	},
+	"autoSyncOnStartup": {
+		"message": "Sync on Browser Startup",
+		"description": ""
+	},
+	"autoSyncOnStartupDesc": {
+		"message": "Trigger a sync immediately when browser starts",
+		"description": ""
+	},
+	"autoSyncLastTime": {
+		"message": "Last Auto Sync",
+		"description": ""
+	},
+	"autoSyncRunNow": {
+		"message": "Run Now",
+		"description": ""
+	},
+	"autoSyncSave": {
+		"message": "Save",
+		"description": ""
+	},
+	"autoSyncSaved": {
+		"message": "Saved, auto sync settings applied",
+		"description": ""
+	},
+	"autoSyncSaveError": {
+		"message": "Saved, but failed to notify background",
+		"description": ""
+	},
+	"autoSyncNever": {
+		"message": "Never",
+		"description": ""
+	},
+	"lastSync": {
+		"message": "Last Sync",
+		"description": ""
+	},
+	"lastSyncNotYet": {
+		"message": "Not yet updated",
+		"description": ""
+	},
+	"lastSyncSourceAuto": {
+		"message": "Auto",
+		"description": ""
+	},
+	"lastSyncSourceManual": {
+		"message": "Manual",
+		"description": ""
+	},
+	"autoSyncInterval_15m": {
+		"message": "15 minutes",
+		"description": "Auto sync interval option: 15 minutes"
+	},
+	"autoSyncInterval_30m": {
+		"message": "30 minutes",
+		"description": "Auto sync interval option: 30 minutes"
+	},
+	"autoSyncInterval_1h": {
+		"message": "1 hour",
+		"description": "Auto sync interval option: 1 hour"
+	},
+	"autoSyncInterval_2h": {
+		"message": "2 hours",
+		"description": "Auto sync interval option: 2 hours"
+	},
+	"autoSyncInterval_6h": {
+		"message": "6 hours",
+		"description": "Auto sync interval option: 6 hours"
+	},
+	"autoSyncInterval_12h": {
+		"message": "12 hours",
+		"description": "Auto sync interval option: 12 hours"
+	},
+	"autoSyncInterval_24h": {
+		"message": "24 hours",
+		"description": "Auto sync interval option: 24 hours"
+	},
+	"autoSyncInterval_48h": {
+		"message": "48 hours",
+		"description": "Auto sync interval option: 48 hours"
+	},
+	"autoSyncInterval_72h": {
+		"message": "72 hours",
+		"description": "Auto sync interval option: 72 hours"
+	},
+	"autoSyncRunning": {
+		"message": "⏳ Syncing..."
+	},
+	"autoSyncRunSuccess": {
+		"message": "✅ Synced at "
+	},
+	"autoSyncRunDone": {
+		"message": "✅ Sync completed"
+	},
+	"autoSyncRunError": {
+		"message": "❌ Sync failed: "
+	},
+	"viewGist": {
+		"message": "Открыть Gist"
+	},
+	"viewGistTitle": {
+		"message": "Посмотреть файл синхронизированных закладок на GitHub"
+	},
+	"viewGistHint": {
+		"message": "Сначала укажите ID Gist"
+	},
+	"githubTokenHelp": {
+		"message": "Требуется Personal Access Token (classic) с областью 'gist'.",
+		"description": "Подсказка под полем GitHub Token"
+	},
+	"getToken": {
+		"message": "Получить Token",
+		"description": "Кнопка открытия страницы настроек токена GitHub"
+	},
+	"createNewGist": {
+		"message": "📝 Создать новый Gist",
+		"description": "Ссылка для создания нового Gist на gist.github.com"
+	},
+	"gistIDHelp": {
+		"message": "Вставьте только часть ID из URL вашего Gist (например, для gist.github.com/<ID> скопируйте только часть <ID>, а не полный URL).",
+		"description": "Подсказка под полем Gist ID"
+	},
+	"aiOrganizeSection": {
+		"message": "🤖 ИИ-организация закладок",
+		"description": "Options page advanced features section title"
+	},
+	"aiOrganizeBackendUrl": {
+		"message": "URL бэкенда ИИ",
+		"description": "Label for the backend service URL input in advanced features"
+	},
+	"aiOrganizeBackendUrlHelp": {
+		"message": "По умолчанию http://103.11.78.250:18903. Измените, если используете свой бэкенд.",
+		"description": "Help text shown below the backend URL input"
+	},
+	"aiOrganizeRunButton": {
+		"message": "Организовать закладки",
+		"description": "Button that triggers the AI organize task"
+	},
+	"aiOrganizeRunningTitle": {
+		"message": "🤖 ИИ-организация…",
+		"description": "Title of the progress bar shown in the popup during the task"
+	},
+	"aiOrganizeProgressLabel": {
+		"message": "{current} / {total} готово ({step})",
+		"description": "Progress text template; {current}/{total} done, {step} shown"
+	},
+	"aiOrganizeModalTitle": {
+		"message": "🎉 Организация завершена",
+		"description": "Title of the success modal shown after organizing completes"
+	},
+	"aiOrganizeModalSummary": {
+		"message": "Упорядочено {count} закладок по {cats} категориям",
+		"description": "Summary line in the success modal; {count} bookmarks in {cats} categories"
+	},
+	"aiOrganizeModalHint": {
+		"message": "Упорядочено в корневой папке 「AI分类」 вашего Gist. Нажмите «Загрузить закладки» во всплывающем окне для синхронизации.",
+		"description": "Hint shown in the success modal telling user to download via popup"
+	},
+	"aiOrganizeModalClose": {
+		"message": "Закрыть",
+		"description": "Close button label on the success/failure modal"
+	},
+	"aiOrganizeFailed": {
+		"message": "❌ Ошибка организации",
+		"description": "Title of the failure modal shown when the AI organize task fails"
+	},
+	"aiOrganizeMissingConfig": {
+		"message": "Сначала укажите Token / Gist ID / имя файла",
+		"description": "Error message when token/gist/file-name config is missing"
+	},
+	"aiOrganizeStartHint": {
+		"message": "✅ Started. Results window will pop up automatically when done.",
+		"description": "Toast message shown after successfully starting the AI organize task"
+	},
+	"aiOrganizeRunning": {
+		"message": "ИИ сортирует…",
+		"description": "Label shown on the Organize button while a task is running"
+	}
 }
