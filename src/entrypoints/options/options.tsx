@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom/client';
-import { Container, Form, Button, Col, Row, InputGroup, Alert } from 'react-bootstrap';
+import { Container, Form, Button, Col, Row, InputGroup, Alert, Modal } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './options.css'
@@ -37,6 +37,7 @@ const Popup: React.FC = () => {
     // ====== AI 整理状态（与 popup 共享）======
     const [aiState, setAiState] = useState<any>(null);
     const [aiStartPending, setAiStartPending] = useState(false);
+    const [showAiResultModal, setShowAiResultModal] = useState(false);
     const pollTimerRef = React.useRef<any>(null);
 
     useEffect(() => {
@@ -45,6 +46,10 @@ const Popup: React.FC = () => {
                 const r: any = await browser.runtime.sendMessage({ name: 'aiOrganizeGetState' });
                 if (r?.ok && r.state) {
                     setAiState(r.state);
+                    // 终态 + 未关闭过 → 显示汇总模态框
+                    if ((r.state.status === 'success' || r.state.status === 'failed') && !r.state.dismissed) {
+                        setShowAiResultModal(true);
+                    }
                 } else {
                     setAiState(null);
                 }
@@ -98,6 +103,109 @@ const Popup: React.FC = () => {
     };
 
     const aiIsRunning = aiState && (aiState.status === 'running' || aiState.status === 'pending');
+
+    /**
+     * 关闭 AI 整理结果模态框 + 清除 storage
+     */
+    const handleCloseAiResultModal = async () => {
+        setShowAiResultModal(false);
+        try {
+            await browser.runtime.sendMessage({ name: 'aiOrganizeClearState' });
+        } catch (e) { /* ignore */ }
+        setAiState(null);
+    };
+
+    /**
+     * 渲染 AI 整理结果汇总模态框
+     */
+    const renderAiResultModal = () => {
+        if (!aiState || (aiState.status !== 'success' && aiState.status !== 'failed')) return null;
+        const isSuccess = aiState.status === 'success';
+        return (
+            <Modal
+                show={showAiResultModal}
+                onHide={handleCloseAiResultModal}
+                backdrop="static"
+                size="sm"
+                centered
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title style={{ fontSize: '16px' }}>
+                        {isSuccess
+                            ? (browser.i18n.getMessage('aiOrganizeModalTitle') || '🎉 Organize Complete')
+                            : (browser.i18n.getMessage('aiOrganizeFailed') || '❌ Organize Failed')}
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body style={{ padding: '12px 16px' }}>
+                    {isSuccess && aiState.result ? (
+                        <>
+                            <div style={{ fontSize: 13, marginBottom: 10, color: '#374151' }}>
+                                {(browser.i18n.getMessage('aiOrganizeModalSummary') || 'Organized {count} bookmarks into {cats} categories')
+                                    .replace('{count}', String(aiState.result.total_bookmarks || 0))
+                                    .replace('{cats}', String(aiState.result.category_count || 0))}
+                            </div>
+                            {aiState.result.categories && aiState.result.categories.length > 0 && (
+                                <div style={{
+                                    border: '1px solid #e5e7eb',
+                                    borderRadius: 6,
+                                    overflow: 'hidden',
+                                    marginBottom: 10,
+                                }}>
+                                    {aiState.result.categories.map((c: any, i: number) => (
+                                        <div
+                                            key={i}
+                                            style={{
+                                                display: 'flex',
+                                                justifyContent: 'space-between',
+                                                alignItems: 'center',
+                                                padding: '6px 12px',
+                                                fontSize: 13,
+                                                borderBottom: i < aiState.result.categories.length - 1 ? '1px solid #f3f4f6' : 'none',
+                                                background: i % 2 === 0 ? '#fff' : '#fafafa',
+                                            }}
+                                        >
+                                            <span style={{ color: '#1f2937' }}>
+                                                <span style={{
+                                                    display: 'inline-block',
+                                                    width: 6, height: 6,
+                                                    borderRadius: '50%',
+                                                    background: '#6366f1',
+                                                    marginRight: 8,
+                                                }} />
+                                                {c.category}
+                                            </span>
+                                            <span style={{
+                                                background: '#eef2ff',
+                                                color: '#4338ca',
+                                                fontSize: 11,
+                                                fontWeight: 600,
+                                                padding: '2px 8px',
+                                                borderRadius: 10,
+                                            }}>
+                                                {c.count}
+                                            </span>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                            <div style={{ fontSize: 11, color: '#6b7280', lineHeight: 1.4 }}>
+                                {browser.i18n.getMessage('aiOrganizeModalHint') || 'Click "Download Bookmarks" in popup to see the result.'}
+                            </div>
+                        </>
+                    ) : (
+                        <div style={{ fontSize: 13, color: '#dc2626' }}>
+                            {aiState?.error || 'Unknown error'}
+                        </div>
+                    )}
+                </Modal.Body>
+                <Modal.Footer style={{ padding: '8px 16px' }}>
+                    <Button variant="primary" size="sm" onClick={handleCloseAiResultModal}>
+                        {browser.i18n.getMessage('aiOrganizeModalClose') || 'Close'}
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+        );
+    };
 
     useEffect(() => {
         optionsStorage.syncForm('#formOptions');
@@ -388,6 +496,7 @@ const Popup: React.FC = () => {
                     </Col>
                 </Form.Group>
             </Form>
+            {renderAiResultModal()}
         </Container >
     )
 }
