@@ -257,7 +257,7 @@
 		"description": "Label for the backend service URL input in advanced features"
 	},
 	"aiOrganizeBackendUrlHelp": {
-		"message": "По умолчанию http://103.11.78.250:18903. Измените, если используете свой бэкенд.",
+		"message": "Введите URL вашего бэкенд-сервиса ИИ. Требуется собственный хостинг.",
 		"description": "Help text shown below the backend URL input"
 	},
 	"aiOrganizeRunButton": {

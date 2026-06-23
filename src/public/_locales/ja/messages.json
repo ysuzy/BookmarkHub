@@ -257,7 +257,7 @@
 		"description": "Label for the backend service URL input in advanced features"
 	},
 	"aiOrganizeBackendUrlHelp": {
-		"message": "デフォルトは http://103.11.78.250:18903。自分でホストする場合は変更してください。",
+		"message": "AI 整理バックエンドサービスの URL を入力してください。セルフホストが必要です。",
 		"description": "Help text shown below the backend URL input"
 	},
 	"aiOrganizeRunButton": {

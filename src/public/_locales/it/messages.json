@@ -257,7 +257,7 @@
 		"description": "Label for the backend service URL input in advanced features"
 	},
 	"aiOrganizeBackendUrlHelp": {
-		"message": "Predefinito http://103.11.78.250:18903. Modifica se ospiti il tuo backend.",
+		"message": "Inserisci l'URL del tuo servizio backend IA. Richiede self-hosting.",
 		"description": "Help text shown below the backend URL input"
 	},
 	"aiOrganizeRunButton": {

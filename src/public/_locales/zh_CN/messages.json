@@ -257,7 +257,7 @@
 		"description": "高级功能中后端服务 URL 的输入框标签"
 	},
 	"aiOrganizeBackendUrlHelp": {
-		"message": "默认 http://103.11.78.250:18903。如自建后端可改为自己的地址。",
+		"message": "输入你的 AI 整理后端服务地址。需自建后端服务。",
 		"description": "后端地址下方的说明"
 	},
 	"aiOrganizeRunButton": {

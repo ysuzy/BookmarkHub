@@ -14,7 +14,7 @@ export default new OptionsSync({
         autoSyncDirection: 'bidirectional', // 同步方向: upload | download | bidirectional
         autoSyncOnStartup: true,          // 浏览器启动时立即同步一次
         // ===== AI 整理书签新增配置 =====
-        aiOrganizeBackendUrl: 'http://103.11.78.250:18903', // 后端服务地址
+        aiOrganizeBackendUrl: '', // 后端服务地址（必填，需自建 AI 整理服务）
     },
 
     // List of functions that are called when the extension is updated

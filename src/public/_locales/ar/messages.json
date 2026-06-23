@@ -257,7 +257,7 @@
 		"description": "Label for the backend service URL input in advanced features"
 	},
 	"aiOrganizeBackendUrlHelp": {
-		"message": "الافتراضي http://103.11.78.250:18903. غيّره إذا كنت تستضيف الخادم بنفسك.",
+		"message": "أدخل عنوان URL لخدمة الواجهة الخلفية للذكاء الاصطناعي. يجب إعداده بنفسك.",
 		"description": "Help text shown below the backend URL input"
 	},
 	"aiOrganizeRunButton": {

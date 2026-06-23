@@ -257,7 +257,7 @@
 		"description": "Label for the backend service URL input in advanced features"
 	},
 	"aiOrganizeBackendUrlHelp": {
-		"message": "Default http://103.11.78.250:18903. Change this if you self-host the backend.",
+		"message": "Enter the URL of your AI organize backend service. Self-hosted required.",
 		"description": "Help text shown below the backend URL input"
 	},
 	"aiOrganizeRunButton": {
