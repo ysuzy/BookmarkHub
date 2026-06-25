@@ -81,17 +81,17 @@ It uses GitHub's Gist records to store browser bookmarks for safe and secure use
 * Robust failure handling: missing config → desktop notification, conflict with manual sync → silent skip, network failure → `Last sync` timestamp not updated
 
 **AI Bookmark Organizer** *(new in v0.1.0+)*
-* One-click AI categorization of all bookmarks into 10 top-level categories (Tech / AI Tools / Learning / Online Tools / Social Media / Entertainment / Shopping / Finance / News / Lifestyle / Other)
-* LLM-driven classification with built-in normalization layer to handle edge cases
+* One-click AI categorization of all bookmarks into auto-generated categories (LLM names them based on URL/title/domain, capped at 10 total)
+* LLM-driven classification following 6 rules: large-category aggregation (all crypto → 1 category, all AI → 1 category, etc.) + category-name cleanup
 * Real-time progress in a popup window with a "Reset" escape hatch
-* Results merged into a dedicated `AIOrganized` root folder inside your Gist
+* Results merged into a dedicated `AI分类` root folder inside your Gist
 * **Self-hosted backend** — you control your data and your LLM API key
 
 ## What's New in v0.1.0+
 
 **Highlights**
 
-* 🤖 **AI Bookmark Organizer** — One-click organization of all bookmarks into 10 categories via LLM (see [Usage → AI Bookmark Organizer](#ai-bookmark-organizer-new)).
+* 🤖 **AI Bookmark Organizer** — One-click organization of all bookmarks into auto-named categories via LLM (see [Usage → AI Bookmark Organizer](#ai-bookmark-organizer-new)).
 * ⏰ **Scheduled Auto Sync** — Background sync on a configurable interval (15 min – 72 h) with three directions (Upload / Download / Bidirectional). Optional "Sync on Browser Startup" trigger. Uses the Chrome `alarms` API (MV3-compatible) so the Service Worker stays asleep between syncs. See [Usage → Scheduled Auto Sync](#scheduled-auto-sync-new).
 * ⚡ **Auto-sync on startup** — Option to automatically pull latest bookmarks from your Gist when the browser starts.
 * 🎯 **Real-time progress UI** — A popup window opens automatically and shows progress (with a reset escape hatch if anything goes wrong).
@@ -198,26 +198,19 @@ Once your backend is running:
 
 * The backend reads your bookmarks from your GitHub Gist (using the same Token you already configured).
 * Each bookmark's URL is fetched (title + description), then sent in batches to an LLM for classification.
-* The LLM picks from 10 fixed categories (see list below).
-* Results are written to your Gist as a new top-level folder `AIOrganized` containing one sub-folder per category.
+* The LLM **auto-generates category names** based on URL/title/domain (no fixed category list). It follows 6 rules:
+  1. **Large-category aggregation (most important)**: all crypto-related sites → 1 category; all AI-related → 1 category; all videos → 1 category; etc.
+  2. **One URL → one category** (never returns multiple)
+  3. **Granularity rule**: prefer a few broad categories over many narrow ones
+  4. **No sub-topic splitting**: e.g. don't split into "crypto wallets" / "crypto mining" — use one top-level "加密货币" or similar
+  5. **Short category names**: 2-6 Chinese characters preferred; avoid English / parentheses / slashes
+  6. **Truly unclassifiable** → "其他" (Other)
+* Results are written to your Gist as a new top-level folder `AI分类` containing one sub-folder per category.
 * Click **Download Bookmarks** in the extension → the new folder structure syncs to your browser.
 
-**The 10 Categories**
+**Category count cap**
 
-| # | Category | Examples |
-|---|----------|----------|
-| 1 | Tech Development | GitHub, Stack Overflow, MDN, dev tools |
-| 2 | AI Tools | ChatGPT, Claude, Midjourney, Cursor |
-| 3 | Learning & Education | Online courses, tutorials, docs, schools |
-| 4 | Online Tools | Converters, calculators, temp mail, cloud drives |
-| 5 | Social Media | Twitter, Weibo, Zhihu, YouTube, Discord |
-| 6 | Entertainment | Videos, games, music, comics |
-| 7 | Shopping | JD, Taobao, Amazon, deal sites |
-| 8 | Finance & Crypto | Banks, stocks, crypto wallets, exchanges |
-| 9 | News | News outlets, blogs, RSS, podcasts |
-| 10 | Lifestyle | Food, travel, weather, health, jobs |
-
-If the LLM produces more than 10 distinct categories, the smallest ones are merged into "Other".
+The backend enforces a hard cap of **≤10 categories total** (including "其他"). If the LLM produces more than 10, the categories with the fewest bookmarks are merged into "其他".
 
 **Troubleshooting**
 
