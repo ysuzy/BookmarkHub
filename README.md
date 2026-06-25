@@ -36,6 +36,7 @@
     <li><a href="#usage">Usage</a>
       <ul>
         <li><a href="#basic-usage-bookmark-sync">Basic Usage (Bookmark Sync)</a></li>
+        <li><a href="#scheduled-auto-sync-new">Scheduled Auto Sync (New)</a></li>
         <li><a href="#ai-bookmark-organizer-new">AI Bookmark Organizer (New)</a></li>
       </ul>
     </li>
@@ -71,6 +72,14 @@ It uses GitHub's Gist records to store browser bookmarks for safe and secure use
 * Support to display the number of local and remote bookmarks
 * Auto-sync on browser startup (configurable)
 
+**Scheduled Auto Sync** *(new in v0.1.0+)*
+* Background auto-sync on a configurable schedule (15 min – 72 h) — no more forgetting to sync
+* Three sync directions: **Upload** (local → Gist), **Download** (Gist → local), or **Bidirectional**
+* Optional "Sync on Browser Startup" — pull the latest bookmarks the moment Chrome launches
+* "Run Now" button for one-off manual triggers from the Options page
+* Battery- & API-friendly: uses the Chrome `alarms` API (MV3 Service Worker compatible — `setInterval` is not allowed in MV3); the Service Worker wakes up only at the configured interval, then sleeps again
+* Robust failure handling: missing config → desktop notification, conflict with manual sync → silent skip, network failure → `Last sync` timestamp not updated
+
 **AI Bookmark Organizer** *(new in v0.1.0+)*
 * One-click AI categorization of all bookmarks into 10 top-level categories (Tech / AI Tools / Learning / Online Tools / Social Media / Entertainment / Shopping / Finance / News / Lifestyle / Other)
 * LLM-driven classification with built-in normalization layer to handle edge cases
@@ -83,6 +92,7 @@ It uses GitHub's Gist records to store browser bookmarks for safe and secure use
 **Highlights**
 
 * 🤖 **AI Bookmark Organizer** — One-click organization of all bookmarks into 10 categories via LLM (see [Usage → AI Bookmark Organizer](#ai-bookmark-organizer-new)).
+* ⏰ **Scheduled Auto Sync** — Background sync on a configurable interval (15 min – 72 h) with three directions (Upload / Download / Bidirectional). Optional "Sync on Browser Startup" trigger. Uses the Chrome `alarms` API (MV3-compatible) so the Service Worker stays asleep between syncs. See [Usage → Scheduled Auto Sync](#scheduled-auto-sync-new).
 * ⚡ **Auto-sync on startup** — Option to automatically pull latest bookmarks from your Gist when the browser starts.
 * 🎯 **Real-time progress UI** — A popup window opens automatically and shows progress (with a reset escape hatch if anything goes wrong).
 * 📊 **Result modal** — After completion, a summary modal appears (in the options page) with category breakdown and one-click "Download Bookmarks".
@@ -124,6 +134,51 @@ For developers / latest unreleased version, see [Building from Source](#building
 2. [Create a token that manages the gist](https://github.com/settings/tokens/new).
 3. [Create a secret gist](https://gist.github.com). **Note: If it's a public gist, your bookmarks can be searched by others.**
 4. Install BookmarkHub from your browser's store. Click the plug-in's settings button, fill in the token and gist ID in the pop-up settings window, and you can upload / download bookmarks.
+
+### Scheduled Auto Sync *(new in v0.1.0+)*
+
+> Stop remembering to sync. BookmarkHub can run in the background on a schedule and keep your local bookmarks and your Gist in sync automatically.
+
+**How it works**
+
+BookmarkHub uses the Chrome `alarms` API (MV3 Service Worker compatible) to schedule background sync. The Service Worker wakes up at the configured interval, runs the sync, then sleeps again — your computer and browser stay idle between syncs.
+
+* **Default interval**: 60 minutes
+* **Minimum interval**: 15 minutes (hard-coded — the Chrome `alarms` API supports 1 min, but values below 15 min are clamped internally to avoid GitHub API rate limits and aggressive Service Worker wake-ups)
+* **Available intervals**: `15 min` / `30 min` / `1 h` / `2 h` / `6 h` / `12 h` / `24 h` / `48 h` / `72 h`
+* **No `setInterval`**: MV3 Service Workers terminate after ~30 s of inactivity. The `alarms` API is the only reliable way to run background tasks in MV3.
+* **Persistence**: the alarm is created/refreshed on extension install/update, on browser startup, and whenever you save your settings. Disabling the feature in Options immediately clears the alarm.
+
+**Three sync directions**
+
+| Direction | Behavior | Typical use case |
+|-----------|----------|------------------|
+| `Upload` (local → Gist) | Pushes local bookmarks to your Gist | You mainly edit bookmarks on this machine |
+| `Download` (Gist → local) | Pulls the latest bookmarks from your Gist | You edit on a different machine, this one follows |
+| `Bidirectional` (download then upload) | Pulls first, then pushes | You edit on multiple machines |
+
+**Optional: Sync on browser startup**
+
+In addition to the periodic schedule, you can enable **"Sync on Browser Startup"** to trigger an immediate sync the moment the browser launches. The most common workflow is: open Chrome → bookmarks are already fresh.
+
+**Failure handling**
+
+* **Missing config** (no Token / Gist ID / file name) → the sync is **skipped**, and a desktop notification is shown (if notifications are enabled). The `Last Auto Sync` timestamp is **not** updated.
+* **Another operation is in progress** (manual upload/download, AI organize, etc.) → the auto sync is silently skipped. The next alarm fire will retry.
+* **Network / API failure** → the `Last Auto Sync` timestamp is **not** updated. Check the Service Worker console for details: `chrome://extensions` → BookmarkHub → **Service Worker** link.
+* **Auto sync running at the same time as a manual sync** is prevented by an internal lock (`curOperType`) — no race conditions, no double-uploads.
+
+**How to enable**
+
+1. Open the **Options** page (right-click the extension icon → Options, or `chrome-extension://<id>/options.html`).
+2. Scroll to the **"Scheduled Auto Sync"** section.
+3. Tick **"Enable Auto Sync"**.
+4. Pick an **interval** and a **sync direction**.
+5. (Optional) Tick **"Sync on Browser Startup"**.
+6. Click **"Save"**. The Service Worker creates / refreshes the alarm immediately — no browser restart needed.
+7. (Optional) Click **"Run Now"** to trigger an immediate sync without waiting for the next interval.
+
+The `Last Auto Sync` field shows the timestamp of the most recent successful automatic sync.
 
 ### AI Bookmark Organizer *(new)*
 
@@ -236,6 +291,7 @@ pnpm build           # produces .output/chrome-mv3/
 ## Roadmap
 
 - [x] Auto-sync bookmarks on browser startup *(shipped in v0.1.0+)*
+- [x] Scheduled background auto-sync (configurable interval) *(shipped in v0.1.0+)*
 - [x] AI Bookmark Organizer *(shipped in v0.1.0+)*
 - [ ] WebDAV protocol support
 - [ ] Mobile app
