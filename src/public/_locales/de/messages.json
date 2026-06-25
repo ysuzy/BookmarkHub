@@ -257,7 +257,7 @@
 		"description": "Label for the backend service URL input in advanced features"
 	},
 	"aiOrganizeBackendUrlHelp": {
-		"message": "Geben Sie die URL Ihres KI-Backend-Dienstes ein. Erfordert Selbsthosting.",
+		"message": "Standard-Demo-Backend. Selbst gehostet? Durch eigene URL ersetzen.",
 		"description": "Help text shown below the backend URL input"
 	},
 	"aiOrganizeRunButton": {

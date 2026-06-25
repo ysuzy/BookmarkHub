@@ -257,7 +257,7 @@
 		"description": "Label for the backend service URL input in advanced features"
 	},
 	"aiOrganizeBackendUrlHelp": {
-		"message": "Enter the URL of your AI organize backend service. Self-hosted required.",
+		"message": "Default demo backend. Self-host? Change to your own URL.",
 		"description": "Help text shown below the backend URL input"
 	},
 	"aiOrganizeRunButton": {

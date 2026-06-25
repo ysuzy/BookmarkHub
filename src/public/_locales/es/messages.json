@@ -257,7 +257,7 @@
 		"description": "Label for the backend service URL input in advanced features"
 	},
 	"aiOrganizeBackendUrlHelp": {
-		"message": "Introduzca la URL de su servicio backend de IA. Requiere autoalojamiento.",
+		"message": "Backend de demostración por defecto. ¿Autoalojado? Cámbialo por tu propia URL.",
 		"description": "Help text shown below the backend URL input"
 	},
 	"aiOrganizeRunButton": {

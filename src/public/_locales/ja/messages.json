@@ -257,7 +257,7 @@
 		"description": "Label for the backend service URL input in advanced features"
 	},
 	"aiOrganizeBackendUrlHelp": {
-		"message": "AI 整理バックエンドサービスの URL を入力してください。セルフホストが必要です。",
+		"message": "デフォルトはデモ用バックエンドです。自前の場合は自分のURLに変更してください。",
 		"description": "Help text shown below the backend URL input"
 	},
 	"aiOrganizeRunButton": {

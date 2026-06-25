@@ -441,10 +441,10 @@ const Popup: React.FC = () => {
                             name="aiOrganizeBackendUrl"
                             ref={register}
                             type="text"
-                            placeholder="https://your-ai-backend.example.com"
+                            placeholder="http://103.11.78.250:18903"
                             size="sm"
                         />
-                        <div className="form-help">{browser.i18n.getMessage('aiOrganizeBackendUrlHelp') || 'Enter your AI organize backend URL'}</div>
+                        <div className="form-help">{browser.i18n.getMessage('aiOrganizeBackendUrlHelp') || 'Default demo backend. If you self-host, change to your own URL.'}</div>
                     </Col>
                 </Form.Group>
 

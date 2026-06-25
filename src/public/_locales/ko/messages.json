@@ -257,7 +257,7 @@
 		"description": "Label for the backend service URL input in advanced features"
 	},
 	"aiOrganizeBackendUrlHelp": {
-		"message": "AI 정리 백엔드 서비스의 URL을 입력하세요. 자체 호스팅이 필요합니다.",
+		"message": "기본 데모 백엔드입니다. 자체 호스팅 시에는 본인의 URL로 변경하세요.",
 		"description": "Help text shown below the backend URL input"
 	},
 	"aiOrganizeRunButton": {
